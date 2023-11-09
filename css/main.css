@@ -299,19 +299,31 @@ h1.navbar-brand {
     margin: 0;
     text-transform: uppercase;
 }
+
+
 .img-logo {
-    height: 40px; 
+    width: 100px;
+    height: 50px;
+    background: url("../img/logo-small-grey.png") no-repeat;
+    display: inline-block;
+    background-size: 50px;
 } 
+.img-logo:hover {
+    background: url(../img/logo-small-white.png) no-repeat;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #fff;
+    color: #c1c1c1;
     font-size: 15px;
     text-transform: uppercase;
     text-align: right;
 
 }
 .navbar-inverse .navbar-nav > li > a:hover {
-    color:rgb(172, 181, 213);
+    color: #fff;
 
 }
 
