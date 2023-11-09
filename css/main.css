@@ -299,8 +299,11 @@ h1.navbar-brand {
     margin: 0;
     text-transform: uppercase;
 }
-
-
+.img-logo {
+    margin-left: 5%;
+    height: 50px;
+}
+/*
 .img-button {
     background: url("../img/logo-small-grey.png") no-repeat;
     width: 50px;
@@ -312,11 +315,12 @@ h1.navbar-brand {
     border: transparent;
 
 } 
+
 .img-button:hover {
     background: url(../img/logo-small-white.png) no-repeat;
     position: relative;
     background-size: 50px;
-}
+}*/
 
 .navbar-inverse .navbar-nav > li > a {
     color: #c1c1c1;
