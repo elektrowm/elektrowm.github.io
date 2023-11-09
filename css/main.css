@@ -301,14 +301,18 @@ h1.navbar-brand {
 }
 
 
-.img-logo {
-    width: 100px;
+.img-button {
+    width: 50px;
     height: 50px;
     background: url("../img/logo-small-grey.png") no-repeat;
     display: inline-block;
     background-size: 50px;
+    margin-left: 5%;
+    background-color: transparent;
+    border: transparent;
+
 } 
-.img-logo:hover {
+.img-button:hover {
     background: url(../img/logo-small-white.png) no-repeat;
     position: relative;
     background-repeat: no-repeat;
