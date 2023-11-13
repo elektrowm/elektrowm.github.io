@@ -2,7 +2,9 @@
 /* =================================== */
 /*	Basic Style 
 /* =================================== */
-
+html {
+    height: -webkit-fill-available;
+}
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
