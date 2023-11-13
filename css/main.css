@@ -3,7 +3,7 @@
 /*	Basic Style 
 /* =================================== */
 html {
-    height: -webkit-fill-available;
+    height: 100%;
 }
 body {
     background-color: #fff;
@@ -11,6 +11,11 @@ body {
     line-height: 24px;
     font-size: 16px;
     color: #818181;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
 }
 
 figure, p, address {
@@ -327,6 +332,7 @@ h1.navbar-brand:hover {
     border: 0;
     width: 40px;
 }
+
 .img-logo:hover {
     filter: brightness(1.5);
 }
@@ -1292,9 +1298,6 @@ textarea.form-control {
 
 @media only screen and (max-width: 767px) {
 
-    body {
-        font-size: 14px;
-    }
 
     .parallax {
         background-position: centet tip !important;
