@@ -2,13 +2,15 @@
 /* =================================== */
 /*	Basic Style 
 /* =================================== */
+html, body {
+    overflow-x: hidden;
+}
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     line-height: 24px;
     font-size: 16px;
     color: #818181;
-    min-height: 100vh;
 }
 
 
