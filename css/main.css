@@ -303,8 +303,8 @@ h1.navbar-brand:hover {
     text-transform: uppercase;
     font-weight: bold;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
     margin: 0;
 
 }
@@ -321,8 +321,6 @@ h1.navbar-brand:hover {
     color: #fff;
     border-bottom: 50px;
     border-color: #fff;
-    bor
-
 }
 .img-logo {
     border: 0;
@@ -565,6 +563,7 @@ h1.navbar-brand:hover {
     border: 3px solid #fff;
     border-radius: 50%;
     margin-right: 35px;
+    margin-bottom: 25px;
     max-width: 100px;
 }
 
@@ -572,6 +571,7 @@ h1.navbar-brand:hover {
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 70px;
+    text-align: justify;
 }
 
 .owl-buttons {
@@ -662,7 +662,7 @@ h1.navbar-brand:hover {
 }
 
 .portfolio-item {
-    cursor: pointer;
+    /*cursor:pointer;*/
     margin: 0 1% 1% 0;
     overflow: hidden;
     position: relative;
@@ -677,12 +677,12 @@ figcaption.mask {
     position: absolute;
     width: 100%;
     text-align: left;
-    
     -webkit-transition: all 0.4s ease 0s;
-       -moz-transition: all 0.4s ease 0s;
-        -ms-transition: all 0.4s ease 0s;
-         -o-transition: all 0.4s ease 0s;
-            transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+     -ms-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+         transition: all 0.4s ease 0s;
+
 }
 
 .portfolio-item:hover figcaption.mask {
