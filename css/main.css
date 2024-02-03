@@ -281,6 +281,7 @@ main > section {
     padding: 5px 0;
 }
 
+
 #navigation.animated-header {
     padding: 20px 0;
 }
@@ -935,6 +936,7 @@ ul.external li a:hover {
 #social {
     background-image: url(../img/slider/banner.jpg);
     padding: 0;
+    background-color: #fff;
 }
 
 #social .overlay {
@@ -1474,8 +1476,12 @@ textarea.form-control {
     }*/
 
 /* home slider */
+
     .caption-content h2 {
         font-size: 35px;
+    }
+    .caption-content span {
+        font-size: 120%;
     }
 
     .caption-content p {
@@ -1526,6 +1532,10 @@ textarea.form-control {
         height: 90px;
         line-height: 96px;
         width: 90px;
+    }
+    #social {
+        background-image: none;
+        background-color: #fff;
     }
 
 /* price */
