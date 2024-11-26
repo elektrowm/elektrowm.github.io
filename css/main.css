@@ -1,7 +1,5 @@
+/* Basic Style */ 
 
-/* =================================== */
-/*	Basic Style 
-/* =================================== */
 html, body {
     overflow-x: hidden;
 }
@@ -74,6 +72,7 @@ main > section {
 }
 
 /* Sweep To Right */
+
 .btn-effect {
 	vertical-align: middle;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -179,10 +178,6 @@ main > section {
     width: 15%;
     margin-left: auto;
     margin-right: auto;
-    /*
-    position: absolute;
-    bottom: 0;
-    width: 115px;*/
 }
 
 .sec-title.white h2:after {
@@ -197,9 +192,7 @@ main > section {
 }
 
 
-/**
-/*	Preloader
-/* ==========================================*/
+/* Preloader */
 
 #preloader {
     background-color: #fff;
@@ -210,6 +203,7 @@ main > section {
 }
 
 /*Battery*/
+
 .loder-box {
   background-color: rgba(0, 0, 0, 0.02);
   border-radius: 1px;
@@ -261,13 +255,7 @@ main > section {
     100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
 }
 
-
-
-
-
-/**
-/*	Header
-/* ==========================================*/
+/* Header */
 
 #navigation {
     -webkit-transition: all 0.8s ease 0s;
@@ -310,7 +298,6 @@ h1.navbar-brand:hover {
 
 }
 
-
 .navbar-inverse .navbar-nav > li > a {
     color: #c1c1c1;
     font-size: 15px;
@@ -332,10 +319,7 @@ h1.navbar-brand:hover {
     filter: brightness(1.5);
 }
 
-/*=================================================================
-	Home Slider
-==================================================================*/
-
+/* Home Slider */
 
 #home-slider {
     position: relative;
@@ -355,7 +339,7 @@ h1.navbar-brand:hover {
     left: 0;
 }
 
-/* Slide wrapper and slides */
+/* Slide wrapper and Slider */
 
 .sl-slide,
 .sl-slides-wrapper,
@@ -478,6 +462,7 @@ h1.navbar-brand:hover {
 
 /* Content wrapper */
 /* Width and height is set dynamically */
+
 .sl-content-wrapper {
     position: absolute;
 }
@@ -487,37 +472,7 @@ h1.navbar-brand:hover {
     height: 100%;
 }
 
-/* Default styles for background colors
-
-.btn-effect:after {
-    width: 0%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    -webkit-transition: all 0.3s ease-out 0s;
-       -moz-transition: all 0.3s ease-out 0s;
-        -ms-transition: all 0.3s ease-out 0s;
-         -o-transition: all 0.3s ease-out 0s;
-            transition: all 0.3s ease-out 0s;
-}
-
-.btn-effect:hover,
-.btn-effect:active {
-    color: #0e83cd;
-}
-
-.btn-effect:hover:after,
-.btn-effect:active:after {
-    width: 100%;
-} */
-
-
-/* Project laughtbox setup */
+/* Project fancybox setup */
 
 .fancybox-item.fancybox-close {
     background: url("../img/icons/close.png") no-repeat scroll 0 0 transparent;
@@ -541,9 +496,7 @@ h1.navbar-brand:hover {
     left: 0;
 }
 
-/*=================================================================
-	About
-==================================================================*/
+/* About */
 
 #about {
     background-color: #5163a5;
@@ -603,9 +556,7 @@ h1.navbar-brand:hover {
     margin-left: 135px;
 }
 
-/*=================================================================
-	Services
-==================================================================*/
+/* Services */
 
 .service-icon {
     border: 3px solid transparent;
@@ -613,7 +564,8 @@ h1.navbar-brand:hover {
     height: 85px;
     width: 85px;
     line-height: 101px;
-
+    position:relative;
+    
     -webkit-transform: rotate(47deg);
        -moz-transform: rotate(47deg);
         -ms-transform: rotate(47deg);
@@ -647,9 +599,7 @@ h1.navbar-brand:hover {
     text-transform: uppercase;
 }
 
-/*=================================================================
-	Portfolio
-==================================================================*/
+/* Portfolio */
 
 .project-wrapper {
     margin: 0;
@@ -758,9 +708,7 @@ ul.external li a:hover {
     padding-top: 0;
 }
 
-/*=================================================================
-	Testimonials
-==================================================================*/
+/* Testimonials */
 
 
 #testimonials {
@@ -929,9 +877,7 @@ ul.external li a:hover {
 }
 
 
-/*=================================================================
-	Price
-==================================================================*/
+/* Price */
 
 #social {
     background-image: url(../img/slider/banner.jpg);
@@ -981,9 +927,7 @@ ul.external li a:hover {
 }
 
 
-/*=================================================================
-	Contact
-==================================================================*/
+/* Contact */
 
 .input-field {
     margin-bottom: 10px;
@@ -1020,34 +964,20 @@ textarea.form-control {
   background: #2E2E2E;
 }
 
-/*.contact-details h3 {
-    border-bottom: 1px solid #5163a5;
-    font-weight: 700;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    
-}*/
 
 .contact-details p {
     line-height: 22px;
-    text-align: left;
+    text-align: center;
 }
 
 .contact-details p i {
     margin-right: 10px;
-    text-align: left;
+    text-align: center;
 }
 .contact-details hr{
     display: none;
 }
 
-/*
-.contact-details span {
-    display: block;
-    margin-left: 24px;
-    text-align: left;
-}*/
 .telefon {
     color: #5163a5;
 }
@@ -1055,24 +985,7 @@ textarea.form-control {
     color: #364370;
 }
 
-
-/*============================================================
-	Google Maps
-==============================================================*/
-
-/*#google-map {
-    padding: 0;
-}
-
-#map-canvas {
-    width: 100%;
-    height: 300px;
-}
-
-
-/*============================================================
-	Footer
-==============================================================*/
+/* Footer */
 
 #footer {
     background-color: #2E2E2E;
@@ -1204,13 +1117,9 @@ textarea.form-control {
 
 
 
-/*============================================================ 
-	Responsive Styles
- ============================================================*/
+/* Responsive Styles */
 
-/*============================================================
-	For Small Desktop
-==============================================================*/
+/* For Small Desktop */
 
 @media (min-width: 980px) and (max-width: 1150px) {
 
@@ -1230,9 +1139,7 @@ textarea.form-control {
 }
 
 
-/*============================================================
-	Tablet (Portrait) Design for a width of 768px
-==============================================================*/
+/* Tablet (Portrait) Design for a width of 768px */
 
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -1290,9 +1197,7 @@ textarea.form-control {
 }
 
 
-/*============================================================
-	Mobile (Portrait) Design for a width of 320px
-==============================================================*/
+/* Mobile (Portrait) Design for a width of 320px */
 
 @media only screen and (max-width: 767px) {
 
@@ -1311,7 +1216,7 @@ textarea.form-control {
         left: 30%;
     }*/
 
-/*navigation*/
+/* navigation */
     .navbar-inverse .navbar-toggle {
         border-color: #fff;
     }
@@ -1465,9 +1370,7 @@ textarea.form-control {
 }
 
 
-/*============================================================
-	Mobile (Landscape) Design for a width of 480px
-==============================================================*/
+/* Mobile (Landscape) Design for a width of 480px */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
@@ -1492,7 +1395,7 @@ textarea.form-control {
         font-size: 35px;
     }
 
-/*about*/
+/* about */
 
     #about .welcome-block h3 {
         margin: 0 0 35px;
