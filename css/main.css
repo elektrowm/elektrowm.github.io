@@ -1,4 +1,5 @@
-/* Basic Style */ 
+/***********************
+Basic Style */ 
 
 html, body {
     overflow-x: hidden;
@@ -6,8 +7,8 @@ html, body {
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    line-height: 24px;
-    font-size: 16px;
+    line-height: 28px;
+    font-size: 18px;
     color: #818181;
 }
 
@@ -505,12 +506,8 @@ h1.navbar-brand:hover {
 
 #about h3 {
     color: #fff;
-    margin: 0 0 35px;
+    margin: 20px 0 35px;;
     text-transform: uppercase;
-}
-
-#about .welcome-block h3 {
-    margin: 0 0 65px;
 }
 
 #about .welcome-block img {
@@ -521,10 +518,11 @@ h1.navbar-brand:hover {
     max-width: 100px;
 }
 
-#about .message-body {
-    font-size: 13px;
+
+#about .message-body, 
+.recent-works {
     line-height: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     text-align: justify;
 }
 
