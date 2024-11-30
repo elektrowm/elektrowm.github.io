@@ -1,5 +1,4 @@
-/***********************
-Basic Style */ 
+/* Basic Style */ 
 
 html, body {
     overflow-x: hidden;
@@ -12,17 +11,8 @@ body {
     color: #818181;
 }
 
-
-figure, p, address {
-    margin: 0;
-}
-
 p {
     line-height: 25px;
-}
-
-iframe {
-    border: 0;
 }
 
 a {
@@ -44,9 +34,19 @@ h1, h2, h3, h4, h5, h6,
     color: #252525;
 }
 
+figure, p, address {
+    margin: 0;
+}
+
+iframe {
+    border: 0;
+}
+
 main > section {
     padding: 70px 0;
 }
+
+/* Buttons */ 
 
 .btn {
     border-radius: 0;
@@ -150,49 +150,6 @@ main > section {
 			transform: scaleX(1);
 }
 
-.sec-title {
-    margin-bottom: 50px;
-}
-
-.sec-title.white {
-    color: #fff;
-}
-
-.sec-title h2 {
-    font-size: 36px;
-    margin: 0 0 30px;
-    padding-bottom: 30px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.sec-title.white h2 {
-    color: #fff;
-}
-
-.sec-title h2:after {
-    border-bottom: 1px solid #5163a5;
-    display: block;
-    content: "";
-    top: 20px;
-    position: relative;
-    width: 15%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sec-title.white h2:after {
-    border-bottom: 1px solid #fff;
-}
-
-.parallax {
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /* Preloader */
 
 #preloader {
@@ -256,7 +213,7 @@ main > section {
     100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
 }
 
-/* Header */
+/* Header - Fixed Navigation */
 
 #navigation {
     -webkit-transition: all 0.8s ease 0s;
@@ -320,12 +277,22 @@ h1.navbar-brand:hover {
     filter: brightness(1.5);
 }
 
-/* Home Slider */
+/* Section Home Slider */
 
 #home-slider {
     position: relative;
     padding: 0;
 }
+
+.sl-slide,
+.sl-slides-wrapper,
+.sl-slide-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+} 
 
 .sl-slider-wrapper {
     width: 100%;
@@ -339,18 +306,6 @@ h1.navbar-brand:hover {
     top: 0;
     left: 0;
 }
-
-/* Slide wrapper and Slider */
-
-.sl-slide,
-.sl-slides-wrapper,
-.sl-slide-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} 
 
 .sl-slide {
     z-index: 1;
@@ -497,7 +452,7 @@ h1.navbar-brand:hover {
     left: 0;
 }
 
-/* About */
+/* Section About */
 
 #about {
     background-color: #5163a5;
@@ -554,7 +509,7 @@ h1.navbar-brand:hover {
     margin-left: 135px;
 }
 
-/* Services */
+/* Section Service */
 
 .service-icon {
     border: 3px solid transparent;
@@ -597,7 +552,7 @@ h1.navbar-brand:hover {
     text-transform: uppercase;
 }
 
-/* Portfolio */
+/* Section Portfolio */
 
 .project-wrapper {
     margin: 0;
@@ -706,7 +661,7 @@ ul.external li a:hover {
     padding-top: 0;
 }
 
-/* Testimonials */
+/* Section Testimonial */
 
 
 #testimonials {
@@ -785,6 +740,8 @@ ul.external li a:hover {
 #testimonials .owl-next:hover {
     color: #fff;
 }
+
+/* Section Price */
 
 .price-table {
     border: 1px solid #e3e3e3;
@@ -874,8 +831,49 @@ ul.external li a:hover {
     color: #fff;
 }
 
+/* Section Social */ 
 
-/* Price */
+.parallax {
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec-title {
+    margin-bottom: 50px;
+}
+
+.sec-title.white {
+    color: #fff;
+}
+
+.sec-title h2 {
+    font-size: 36px;
+    margin: 0 0 30px;
+    padding-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.sec-title.white h2 {
+    color: #fff;
+}
+
+.sec-title h2:after {
+    border-bottom: 1px solid #5163a5;
+    display: block;
+    content: "";
+    top: 20px;
+    position: relative;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-title.white h2:after {
+    border-bottom: 1px solid #fff;
+}
 
 #social {
     background-image: url(../img/slider/banner.jpg);
@@ -925,7 +923,7 @@ ul.external li a:hover {
 }
 
 
-/* Contact */
+/* Section Contact */
 
 .input-field {
     margin-bottom: 10px;
