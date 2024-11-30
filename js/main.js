@@ -325,3 +325,33 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+
+// ========== Toggle ========== //
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle Button und Navbar Content
+  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+  // Event Listener für alle Navigations-Links
+  const navLinks = document.querySelectorAll('.navbar-nav > li > a');
+  
+  navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+          // Wenn das Menü geöffnet ist (hat die Klasse 'in')
+          if (navbarCollapse.classList.contains('in')) {
+              // Simuliere einen Klick auf den Toggle-Button
+              navbarToggle.click();
+          }
+      });
+  });
+  
+  // Zusätzlich: Schließen beim Klick außerhalb
+  document.addEventListener('click', function(e) {
+      const isClickInside = navbarCollapse.contains(e.target) || navbarToggle.contains(e.target);
+      
+      if (!isClickInside && navbarCollapse.classList.contains('in')) {
+          navbarToggle.click();
+      }
+  });
+});
