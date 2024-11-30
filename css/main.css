@@ -1204,6 +1204,30 @@ textarea.form-control {
         background-color: transparent;
     }
 
+
+        .navbar-toggle {
+            padding: 15px;
+            margin-right: 15px;
+        }
+        
+        .navbar-toggle .icon-bar {
+            transition: all 0.3s ease;
+        }
+        
+        /* Größerer Klickbereich */
+        .navbar-nav > li > a {
+            padding: 15px 20px;
+        }
+        
+        /* Sanfte Animation beim Öffnen/Schließen */
+        .navbar-collapse {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+
+
+
 /* slider */
     .caption-content h2 {
         font-size: 18px;
