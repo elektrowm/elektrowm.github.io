@@ -13,6 +13,7 @@ body {
 
 p {
     line-height: 25px;
+    font-size: 20px;
 }
 
 a {
@@ -484,7 +485,6 @@ h1.navbar-brand:hover {
 .owl-buttons {
     border: 2px solid #fff;
     display: inline-block;
-    float: right;
     padding: 1px 8px 5px;
 }
 
@@ -719,7 +719,7 @@ ul.external li a:hover {
 
 #testimonials .owl-buttons {
     border: 2px solid #fff;
-    float: inherit;
+    float: center;
 }
 
 #testimonials .owl-prev:hover,
@@ -1230,11 +1230,11 @@ textarea.form-control {
 
 /* slider */
     .caption-content h2 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .caption-content > span {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 20px;
     }
 
