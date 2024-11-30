@@ -566,36 +566,22 @@ h1.navbar-brand:hover {
 }
 
 .portfolio-item {
-    /*cursor:pointer;*/
+    cursor: pointer;
     margin: 0 1% 1% 0;
     overflow: hidden;
     position: relative;
     width: 32%;
 }
 
-figcaption.mask {
-    background-color: rgba(54, 55, 50, 0.79);
-    bottom: -126px;
-    color: #fff;
-    padding: 25px;
-    position: absolute;
-    width: 100%;
-    text-align: left;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-     -ms-transition: all 0.4s ease 0s;
-      -o-transition: all 0.4s ease 0s;
-         transition: all 0.4s ease 0s;
-
+.portfolio-item img {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    filter: brightness(0.5); /* Bild startet dunkler */
+    transform: scale(1);
 }
 
-.portfolio-item:hover figcaption.mask {
-    bottom: 0;
-}
-
-figcaption.mask h3 {
-    margin: 0;
-    color: #fff;
+.portfolio-item img:hover {
+    filter: brightness(1.1); /* Bild wird beim Hover heller */
 }
 
 ul.external {
@@ -1125,10 +1111,6 @@ textarea.form-control {
     }
 
 /* portfolio */
-    figcaption.mask {
-        bottom: -151px;
-    }
-
     .testimonial-item > div:after {
         bottom: -40px;
     }
@@ -1275,12 +1257,6 @@ textarea.form-control {
         width: 280px;
     }
 
-    figcaption.mask {
-        bottom: -107px;
-        color: #fff;
-        padding: 15px;
-    }
-
 /* lightbox */
     .fancybox-title h3 {
         font-size: 20px;
@@ -1409,10 +1385,6 @@ textarea.form-control {
         width: 48%;
     }
 
-    figcaption.mask {
-        bottom: -132px;
-    }
-
 /* testimonial */
     .testimonial-item {
         width: 80%;
@@ -1453,4 +1425,60 @@ textarea.form-control {
         width: 380px;
     }
   
+}
+
+
+/* Touch-optimierte Styles */
+@media (hover: none) and (pointer: coarse) {
+    /* Größere Touch-Targets für Navigation */
+    .navbar-inverse .navbar-nav > li > a {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+    
+    /* Größere Touch-Flächen für Portfolio-Items */
+    .portfolio-item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    
+    /* Optimierte Hover-States für Touch */
+    .portfolio-item img {
+        transition: transform 0.3s ease-out;
+        filter: brightness(0.7);
+    }
+    
+    .portfolio-item.touch-active img {
+        filter: brightness(1.1);
+    }
+    
+    /* Größere Buttons für Touch */
+    .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        min-height: 44px; /* Apple's empfohlene Mindesthöhe */
+    }
+    
+    /* Mehr Platz zwischen klickbaren Elementen */
+    .social-button li a {
+        margin: 10px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Optimierte Form-Elemente für Touch */
+    .form-control {
+        height: 54px;
+        font-size: 16px; /* Verhindert iOS Zoom bei Focus */
+    }
+    
+    textarea.form-control {
+        height: 180px;
+    }
+}
+
+/* Active States für Touch-Events */
+.touch-active {
+    transform: scale(0.98);
+    transition: transform 0.2s ease-out;
 }
