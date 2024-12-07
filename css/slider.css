@@ -241,27 +241,31 @@
     .nav-dots {
         display: none;
     }
-   }
+   
+}
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .slider-navigations button {
         top: unset;
         bottom: -15px;
         background: none;
     }
 
+}
+@media (max-width: 1024px) {
+
     .slider-pagination {
         display: none;
     }
+
+    #slide-prev,
+    #slide-next {
+        display: none !important; /* !important um die JavaScript-Styles zu überschreiben */
+    }
+
 }
 
 @media (max-width: 768px) {
-    .slider-navigations button {
-        display: none;
-    }
-}
-
-@media (max-width: 428px) {
     .slider-title {
         font-size: 2rem;
     }
@@ -269,4 +273,8 @@
     .slider-subtitle {
         font-size: 1.2rem;
     }
+
+}
+
+@media (max-width: 428px) {
 }
