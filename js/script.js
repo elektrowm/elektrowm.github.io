@@ -173,3 +173,51 @@ menuItems.forEach(item => {
 //========================================
 //Scrolling Text Project Section
 //========================================
+
+// // Wähle alle Elemente mit der Klasse 'project-text-item'
+// const projectItems = document.querySelectorAll('.project-text-item');
+// const totalItems = projectItems.length;
+
+// // Erstelle ein Array mit dem Inhalt aller <p>-Tags
+// const projectItemsArray = Array.from(projectItems).map(item => item.querySelector('p').textContent);
+
+// function scrollText(index) {
+//     const currentItem = projectItems[index % totalItems];
+//     currentItem.style.display = 'block';  // Macht das aktuelle Item sichtbar
+
+//     return currentItem;
+// }
+
+// if (totalItems > 0) {
+//     // Schleife die genau 5 mal durchläuft
+//     for (let index = 0; index < 5 * totalItems; index++) {
+//         const item = scrollText(index);
+//         console.log('Index:', index);
+//         console.log('Inhalt:', projectItemsArray[index % totalItems]);
+//     }
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scroller = document.getElementById('scroller');
+    const scrollerContent = scroller.innerHTML;
+    
+    // Clone the content and append it to create seamless scrolling
+    scroller.innerHTML = scrollerContent + scrollerContent;
+
+    // Function to reset animation when it reaches the end
+    function checkScroll() {
+        const scrollerHeight = scroller.offsetHeight / 2;
+        const containerHeight = scroller.parentElement.offsetHeight;
+        
+        // Calculate animation duration based on content length
+        const duration = Math.max(20, scrollerHeight / 30); // Vermeidet zu schnelles Scrollen, das schwer zu lesen wäre.
+        scroller.style.animationDuration = `${duration}s`;
+        console.log('Index:');
+    }
+
+    // Initial setup
+    checkScroll();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', checkScroll);
+});
