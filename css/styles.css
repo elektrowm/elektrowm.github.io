@@ -299,7 +299,7 @@ body {
 
 .project-text-item span {
     font-weight: bolder;
-    color: #000;
+    font-style: italic;
 }
 
 @keyframes scrollText {
@@ -311,11 +311,22 @@ body {
     }
 }
 
-/* Optional: Pause animation on hover */
 .project-banner:hover .project-text {
     animation-play-state: paused;
 }
 
+.project-text-item:after {
+    display: block;
+    content: "";
+    /* top: 15px; */
+    margin: 20px auto;
+    position: relative;
+    width: 100%;
+}
+
+.project-text-item i {
+    margin-right: 10px;
+}
 /* Welcome Content */
 .welcome-content img {
     float: left;
