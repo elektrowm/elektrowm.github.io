@@ -199,25 +199,33 @@ menuItems.forEach(item => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const scroller = document.getElementById('scroller');
-    const scrollerContent = scroller.innerHTML;
+    const originalContent = scroller.innerHTML;
     
-    // Clone the content and append it to create seamless scrolling
-    scroller.innerHTML = scrollerContent + scrollerContent;
+    // Clone the content 4 times
+    scroller.innerHTML = originalContent.repeat(4);
 
-    // Function to reset animation when it reaches the end
+    // Function to check scroll position and reset if needed
     function checkScroll() {
-        const scrollerHeight = scroller.offsetHeight / 2;
+        if (scroller.scrollTop >= scroller.scrollHeight / 2) {
+            scroller.scrollTop = 0;
+        }
+    }
+
+    // Calculate animation duration based on content length
+    function updateScrollSpeed() {
+        const scrollerHeight = scroller.scrollHeight;
         const containerHeight = scroller.parentElement.offsetHeight;
+        const duration = Math.max(20, scrollerHeight / 50); // Angepasste Scrollgeschwindigkeit
         
-        // Calculate animation duration based on content length
-        const duration = Math.max(20, scrollerHeight / 30); // Vermeidet zu schnelles Scrollen, das schwer zu lesen wäre.
         scroller.style.animationDuration = `${duration}s`;
-        console.log('Index:');
     }
 
     // Initial setup
-    checkScroll();
-
-    // Recalculate on window resize
-    window.addEventListener('resize', checkScroll);
+    updateScrollSpeed();
+    
+    // Add scroll event listener for infinite loop
+    scroller.addEventListener('scroll', checkScroll);
+    
+    // Update on window resize
+    window.addEventListener('resize', updateScrollSpeed);
 });
