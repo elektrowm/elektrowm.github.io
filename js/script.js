@@ -167,3 +167,34 @@ menuItems.forEach(item => {
         closeMobileMenu();
     });
 });
+
+
+
+//========================================
+//Scrolling Text Project Section
+//========================================
+// // Wähle alle projekt Items
+// const projectItems = document.querySelectorAll(".project-item"); // Angenommen, das ist der Container
+// const projectText = document.querySelector(".project-text-item");
+// const totalItems = projectItems.length;
+// let currentItem = 0;
+
+// function scrollText(item, index) {    
+//     // Prüfe ob die Elemente existieren
+//     if (!item || !projectText) return;
+    
+//     const targetText = item.querySelector(".project-text");
+//     // Prüfe ob das Text-Element existiert
+//     if (!targetText) return;
+    
+//     projectText.innerHTML = targetText.innerHTML;
+//     currentItem = index;
+
+//     // Prüfe ob wir am Ende sind
+//     if (currentItem >= totalItems - 1) {
+//         // Starte wieder von vorne
+//         currentItem = 0;
+//     } else {
+//         currentItem++;
+//     }
+// }
