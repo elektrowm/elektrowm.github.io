@@ -174,35 +174,11 @@ menuItems.forEach(item => {
 //Scrolling Text Project Section
 //========================================
 
-// // Wähle alle Elemente mit der Klasse 'project-text-item'
-// const projectItems = document.querySelectorAll('.project-text-item');
-// const totalItems = projectItems.length;
-
-// // Erstelle ein Array mit dem Inhalt aller <p>-Tags
-// const projectItemsArray = Array.from(projectItems).map(item => item.querySelector('p').textContent);
-
-// function scrollText(index) {
-//     const currentItem = projectItems[index % totalItems];
-//     currentItem.style.display = 'block';  // Macht das aktuelle Item sichtbar
-
-//     return currentItem;
-// }
-
-// if (totalItems > 0) {
-//     // Schleife die genau 5 mal durchläuft
-//     for (let index = 0; index < 5 * totalItems; index++) {
-//         const item = scrollText(index);
-//         console.log('Index:', index);
-//         console.log('Inhalt:', projectItemsArray[index % totalItems]);
-//     }
-// }
-
 document.addEventListener('DOMContentLoaded', function() {
     const scroller = document.getElementById('scroller');
     const originalContent = scroller.innerHTML;
     
-    // Clone the content 4 times
-    scroller.innerHTML = originalContent.repeat(4);
+    scroller.innerHTML = originalContent.repeat(4);// Clonen of the content
 
     // Function to check scroll position and reset if needed
     function checkScroll() {
@@ -211,21 +187,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Calculate animation duration based on content length
     function updateScrollSpeed() {
         const scrollerHeight = scroller.scrollHeight;
         const containerHeight = scroller.parentElement.offsetHeight;
-        const duration = Math.max(20, scrollerHeight / 50); // Angepasste Scrollgeschwindigkeit
+        const duration = Math.max(20, scrollerHeight / 50); // Speed regulation
         
         scroller.style.animationDuration = `${duration}s`;
     }
 
-    // Initial setup
     updateScrollSpeed();
     
-    // Add scroll event listener for infinite loop
     scroller.addEventListener('scroll', checkScroll);
-    
-    // Update on window resize
+
     window.addEventListener('resize', updateScrollSpeed);
 });
