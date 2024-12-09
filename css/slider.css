@@ -4,9 +4,12 @@
    #slider {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /*background-color: var(--top-bottom-bg);*/
+    height: 100vh; 
+    /*100svh refers to 100% of the height of the smallest possible viewport.
+    100lvh refers to 100% of the height of the largest possible viewport.
+    100dvh refers to 100% of the dynamic viewport height — meaning the value will change as the user scrolls. 
+    overflow: hidden;*/
+    background-color: var(--top-bottom-bg);
 }
 
 .slider-container {
