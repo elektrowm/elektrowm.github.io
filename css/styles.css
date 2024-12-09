@@ -374,8 +374,6 @@ body {
 .service-item p {
     font-size: 0.9rem;
     color: var(--text-color-dark);
-    /* border: 2px solid var(--text-color-dark); */
-    /* border-radius: 10px; */
     height: 180px;
     padding: 10px;
     align-content: center;
