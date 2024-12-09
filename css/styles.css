@@ -278,24 +278,26 @@ body {
 }
 
 .project-box1 {
-    background: #C1C1C1;
+    background: #2e323f;
     grid-column: span 4;
 }
 .project-box2 {
-    background: #818181;
+    background: #DDCDB6;
+    color: var(--headline-dark);
     grid-column: span 5;
 }
 
 .project-box3 {
-    background: #6778b9;
+    background: #99a7df;
     grid-column: span 2;
 }
 .project-box4 {
-    background: #364370;
+    background: #C1C1C1;
+    color:#252525;
     grid-column: span 2;
 }
 .project-box5 {
-    background: #2e323f;
+    background: #363f68;
     grid-column: span 3;
 }
 .project-box6 {
@@ -309,6 +311,7 @@ body {
 }
 .project-box8 {
     background: #252525;
+    color: var(--text-color-light);
     grid-column: span 2;
 }
 
@@ -327,6 +330,17 @@ body {
     border-radius: 50%;
     padding: 5px;
     background-color: var(--corporate-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Services Section */
@@ -376,9 +390,6 @@ body {
 }
 
 /* Portfolio Section */
-#portfolio {
-    color: #fff;
-}
 
 .portfolio-item {
     position: relative;
@@ -608,6 +619,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .about-grid {
+        display: block;
+    }
+
     .project-box {
         font-size: 0.9rem;
     }
