@@ -287,7 +287,7 @@ body {
     grid-column: span 4;
 }
 .project-box2 {
-    background: #DDCDB6;
+    background: var(--text-color-dark);
     color: var(--headline-dark);
     grid-column: span 5;
 }
