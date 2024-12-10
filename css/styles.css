@@ -261,6 +261,7 @@ body {
     color: #fff;
     text-align: justify;
     padding-bottom: 50px;
+    width: 100%;
 }
 
 .about-grid {
@@ -615,10 +616,7 @@ body {
 @media (max-width: 768px) {
     .about-grid {
         display: grid;
-        width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: row dense;
-        gap: 0.8rem;
     }
     
     .project-box {
@@ -681,6 +679,7 @@ body {
 
 @media (max-width: 428px) {
     #about {
+        max-width: 428px;
         font-size: 0.8rem;
     }
 
