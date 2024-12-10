@@ -623,6 +623,10 @@ body {
     .about-grid {
         display: block;
     }
+
+    .project-box {
+        margin-bottom: 10px;
+    }
             
     .services-grid {
         grid-template-columns: 1fr;
