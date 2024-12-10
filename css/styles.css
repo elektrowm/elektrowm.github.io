@@ -289,25 +289,31 @@ body {
 .project-box1 {
     grid-column: span 4;
 }
+
 .project-box2 {
-    grid-column: span 5;
+    grid-column: span 2;
 }
 
 .project-box3 {
-    grid-column: span 3;
-}
-.project-box4 {
     grid-column: span 2;
 }
+
+.project-box4 {
+    grid-column: span 5;
+}
+
 .project-box5 {
     grid-column: span 3;
 }
+
 .project-box6 {
-    grid-column: span 2;
+    grid-column: span 3;
 }
+
 .project-box7 {
     grid-column: span 3;
 }
+
 .project-box8 {
     grid-column: span 2;
 }  
