@@ -294,7 +294,7 @@ body {
 }
 
 .project-box3 {
-    grid-column: span 2;
+    grid-column: span 3;
 }
 .project-box4 {
     grid-column: span 2;
@@ -303,14 +303,14 @@ body {
     grid-column: span 3;
 }
 .project-box6 {
-    grid-column: span 3;
+    grid-column: span 2;
 }
 .project-box7 {
     grid-column: span 3;
 }
 .project-box8 {
     grid-column: span 2;
-}
+}  
 
 /* Welcome Content */
 .logo-center {
@@ -615,42 +615,9 @@ body {
 
 @media (max-width: 768px) {
     .about-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: block;
     }
-    
-    .project-box {
-        font-size: 0.9rem;
-        /* margin-bottom: 1rem; */
-    }
-        
-    .project-box1 {
-        grid-column: span 2;
-    }
-    .project-box2 {
-        grid-column: span 2;
-        grid-row-start: 4 !important;
-    }
-    
-    .project-box3 {
-        grid-column: span 1;
-    }
-    .project-box4 {
-        grid-column: span 1;
-    }
-    .project-box5 {
-        grid-column: span 1;
-    }
-    .project-box6 {
-        grid-column: span 1;
-    }
-    .project-box7 {
-        grid-column: span 1;
-    }
-    .project-box8 {
-        grid-column: span 1;
-    }
-        
+            
     .services-grid {
         grid-template-columns: 1fr;
     }
