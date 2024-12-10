@@ -392,24 +392,6 @@ body {
 
 /* Portfolio Section */
 
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border: 15px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s ease;
-    text-align: center;
-    transform: translateZ(0);
-    will-change: transform;
-    background-color: #fff;
-    color: var(--text-color-dark);
-}
-
-.portfolio-item h4 {
-    padding-top: 10px;
-    font-size: 1.2rem;
-    font-weight: 300;
-}
 
 .portfolio-grid {
     display: grid;
@@ -417,10 +399,6 @@ body {
     gap: 2rem;
 }
 
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-}
 
 /* Testimonials Section */ 
 #testimonials {
