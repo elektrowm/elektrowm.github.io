@@ -615,6 +615,7 @@ body {
 @media (max-width: 768px) {
     .about-grid {
         display: grid;
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-flow: row dense;
         gap: 0.8rem;
