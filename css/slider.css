@@ -10,7 +10,7 @@
 
 .slider-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     background-color: var(--top-bottom-bg);
 }
@@ -68,6 +68,17 @@
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .slider-title {
+      font-size: 2rem;
+    }
+    
+    .slider-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
 
 .slider-subtitle {
     font-size: 1.5rem;
@@ -168,6 +179,25 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 1200px) {
+    .slider-navigations button {
+      top: unset;
+      bottom: -0.3rem;
+      background: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .slider-pagination {
+      display: none;
+    }
+  
+    #slide-prev,
+    #slide-next {
+      display: none !important;
+    }
+  }
+  
 /* ==========================================================================
    8. DOTS NAVIGATION
    ========================================================================== */
@@ -232,48 +262,8 @@
 	background: rgba(255,255,255,0.8);
 }
 
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {    
     .nav-dots {
-        display: none;
+      display: none;
     }
-   
-}
-
-@media (max-width: 1200px) {
-    .slider-navigations button {
-        top: unset;
-        bottom: -15px;
-        background: none;
-    }
-
-}
-@media (max-width: 1024px) {
-
-    .slider-pagination {
-        display: none;
-    }
-
-    #slide-prev,
-    #slide-next {
-        display: none !important; /* !important um die JavaScript-Styles zu überschreiben */
-    }
-
-}
-
-@media (max-width: 768px) {
-    .slider-title {
-        font-size: 2rem;
-    }
-    
-    .slider-subtitle {
-        font-size: 1.2rem;
-    }
-
-}
-
-@media (max-width: 428px) {
-}
+  }

@@ -168,36 +168,33 @@ menuItems.forEach(item => {
     });
 });
 
-
-
 //========================================
-//Scrolling Text Project Section
+//Card Flip Animation
 //========================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const scroller = document.getElementById('scroller');
-    const originalContent = scroller.innerHTML;
+    // Alle Karten auswählen
+    const cards = document.querySelectorAll('.card');
     
-    scroller.innerHTML = originalContent.repeat(4);// Clonen of the content
-
-    // Function to check scroll position and reset if needed
-    function checkScroll() {
-        if (scroller.scrollTop >= scroller.scrollHeight / 2) {
-            scroller.scrollTop = 0;
-        }
-    }
-
-    function updateScrollSpeed() {
-        const scrollerHeight = scroller.scrollHeight;
-        const containerHeight = scroller.parentElement.offsetHeight;
-        const duration = Math.max(20, scrollerHeight / 50); // Speed regulation
-        
-        scroller.style.animationDuration = `${duration}s`;
-    }
-
-    updateScrollSpeed();
+    // Überprüfen, ob es ein Touch-Gerät ist
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
-    scroller.addEventListener('scroll', checkScroll);
-
-    window.addEventListener('resize', updateScrollSpeed);
+    if (isTouchDevice) {
+        // Für jede Karte Event Listener hinzufügen
+        cards.forEach(card => {
+            // Click/Touch Event Handler für diese Karte
+            function handleClick(e) {
+                card.classList.toggle('is-flipped');
+            }
+            
+            // Event Listener für Touch und Click
+            card.addEventListener('click', handleClick);
+            card.addEventListener('touchend', function(e) {
+                if (e.cancelable) {
+                    e.preventDefault();
+                }
+                handleClick(e);
+            });
+        });
+    }
 });
