@@ -11,9 +11,9 @@
     --section-sides: 3%;
     
     /* Colors */
-    --text-color-light: #C7C7CC;
+    --text-color-light: #C7C7CC; /*rgb(199, 199, 204)*/
     --text-color-dark: #8E8E93;
-    --corporate-color: #5163a5;
+    --corporate-color: #5163a5; /*rgb(81, 99, 165)*/
     --corporate-color-dark: #1F1F21;
     --top-bottom-bg: #2e323f;
     --headline-light: #fff;
@@ -391,12 +391,136 @@ body {
 }
 
 /* Portfolio Section */
-
+:root {
+    --card-front-bg: #fff;
+}
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Height depends on width */
+}
+
+.card-side {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--card-front-bg);
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+} 
+
+/* Card Front */
+.card-side_front {
+    padding: 1rem;
+}
+.card-box {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: blueviolet; */
+    background-color: var(--card-front-bg);
+}
+
+.card-image {
+    position: relative;
+    padding-top: 80%; /* Image Height */
+    /* background-color: chartreuse; */
+    background-color: var(--card-front-bg);
+}
+.card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-title {
+    position: relative;
+    display: block;
+    padding: 1rem;
+    /* background-color: coral; */
+    background-color: var(--card-front-bg);
+    font-size: 1.2rem;
+    color: var(--headline-dark);
+}
+/* Card Back */
+.card-cover {
+    position: relative;
+    background-size: cover;
+    height: 4rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: var(--corporate-color);
+}
+
+.card-heading {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+
+}
+
+.card-heading-span {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.card-details {
+    padding: 1rem 2rem;
+}
+
+.card-details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-details ul li {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.card-details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+/* Card Animation*/
+.card-side_back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side_back {
+    transform: rotateY(0);
+}
+
+.card:hover .card-side_front {
+    transform: rotateY(-180deg);
 }
 
 
