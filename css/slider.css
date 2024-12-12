@@ -69,7 +69,12 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+.slider-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
     .slider-title {
       font-size: 2rem;
     }
@@ -77,15 +82,17 @@
     .slider-subtitle {
       font-size: 1.2rem;
     }
-  }
-
-
-.slider-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .slider-title {
+      font-size: 1.4rem;
+    }
+    
+    .slider-subtitle {
+      font-size: 1rem;
+    }
+}
 .slider-button {
     position: relative;
     margin: auto;
