@@ -7,7 +7,7 @@
 /* Variables */
 :root {
     /* Layout */
-    --header-height: 5rem;
+    --header-height: 3rem;
     --section-sides: 3%;
     
     /* Colors */
@@ -57,12 +57,11 @@ body {
     -webkit-overflow-scrolling: touch;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-y: scroll;
 }
 
 .main-content {
-    /*margin-top: -30px;*/
     padding-bottom: var(--safe-area-inset-bottom);
     padding-top: var(--safe-area-inset-top);
 }
@@ -99,8 +98,8 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     text-transform: uppercase;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding: 1rem 0;    
+    margin-bottom: 1rem;
     hyphens: auto; 
 }
 
@@ -111,7 +110,7 @@ body {
 .headline-title-dark:after {
     display: block;
     content: "";
-    top: 15px;
+    top: 1rem;
     position: relative;
     width: 20%;
     margin-left: auto;
@@ -159,7 +158,7 @@ body {
 
 /* Logo top left */
 .header-logo {
-    min-width: 200px;
+    min-width: 10rem;
     align-items: center;
     position: absolute;
     z-index: 1001;
@@ -182,9 +181,9 @@ body {
 }
 
 .header-logo .img-logo {
-    height: 50px;
+    height: 2rem;
     width: auto;
-    margin-left: 10px;
+    margin-left: 0.5rem;
 }
 
 @media (max-width: 1024px) {
@@ -201,7 +200,7 @@ body {
   
     .header-inner {
       display: flex;
-      padding-right: 20px;
+      padding-right: 1rem;
     }
 }  
 
@@ -236,7 +235,7 @@ body {
   
     .topnav ul {
       flex-direction: column;
-      row-gap: 50px;
+      row-gap: 2.5rem;
     }
 }  
 
@@ -265,8 +264,8 @@ body {
     z-index: 50;
     align-items: center;
     justify-content: flex-end;
-    width: 30px;
-    height: 18px;
+    width: 1.5rem;
+    height: 1rem;
 }
 
 .burger span{
@@ -321,7 +320,7 @@ body {
    ========================================================================== */
 /* Services Section */
 #service {
-    padding-bottom: 50px;
+    padding-bottom: 2.5rem;
 }
 
 .service-item {
@@ -329,13 +328,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 0.5rem;
     transition: 0.3s ease;
 }
 
 .service-item i {
     font-size: 2rem;
-    margin: 10px;
+    margin: 0.5rem;
     transition: all 0.3s ease;
 }
 
@@ -348,14 +347,14 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin: 10px;
+    margin: 0.5rem;
 }
 
 .service-item p {
     font-size: 0.9rem;
     color: var(--text-color-dark);
     height: 180px;
-    padding: 10px;
+    padding: 0.5rem;
     align-content: center;
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px #fff;
 }
@@ -398,7 +397,7 @@ body {
 .project-box {
     display: flex;
     text-align: left;
-    padding: 20px;
+    padding: 1rem;
     background: var(--top-bottom-bg);
     color: var(--text-color-light);
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
@@ -443,13 +442,11 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
-    /* border: 3px solid white; */
     border-radius: 50%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo-center img {
-    /* position: relative; */
     width: 100px;
     border: 3px solid white;
     padding: 5px;
@@ -602,7 +599,7 @@ body {
 }
 
 .social-button li:nth-child(2) {
-    margin: 0 20px;
+    margin: 0 1rem;
 }
 
 /* Contact Section */
