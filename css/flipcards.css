@@ -1,16 +1,40 @@
 :root {
+    /* Colors */
     --card-front-bg: #fff;
+    --headline-dark: #333;
+    --corporate-color: #007bff;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    
+    /* Dynamic font sizes */
+    --title-font-size: clamp(1rem, 2vw, 1.5rem);
+    --heading-font-size: clamp(0.875rem, 1.5vw, 1.2rem);
+    --detail-font-size: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+/* Portfolio Section */
+.cards-container {
+    width: 100%;
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .card {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Height depends on width */
-    perspective: 1200px;
+    padding-top: 100%;
+    perspective: 1200px; /* Pixel für präzise 3D-Effekte */
 }
 
 .card-side {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -20,18 +44,18 @@
     text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 3px;
+    border-radius: 3px; /* Kleine UI-Details in px */
     overflow: hidden;
-    transition: all 0.8s ease;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.8s ease;
+    box-shadow: 0 2px 6px var(--shadow-color); /* Feine Schatten in px */
 } 
 
 /* Card Front */
 .card-side_front {
     padding: 1rem;
 }
+
 .card-box {
-    display: block;
     position: relative;
     height: 100%;
     width: 100%;
@@ -40,7 +64,7 @@
 
 .card-image {
     position: relative;
-    padding-top: 80%; /* Image Height */
+    padding-top: 75%;
     background-color: var(--card-front-bg);
 }
 
@@ -49,130 +73,137 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
 .card-title {
     position: relative;
-    display: block;
     padding: 1rem;
     background-color: var(--card-front-bg);
-    font-size: 1.2rem;
+    font-size: var(--title-font-size);
     color: var(--headline-dark);
 }
+
 /* Card Back */
+.card-side_back {
+    transform: rotateY(180deg);
+}
+
 .card-cover {
     position: relative;
     background-size: cover;
-    height: 4rem;
+    height: 3.5rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; /* UI-Detail in px */
+    border-top-right-radius: 3px; /* UI-Detail in px */
     background-color: var(--corporate-color);
 }
 
 .card-heading {
-    text-align: center;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
+    width: 100%;
 }
 
 .card-heading-span {
-    font-size: 1rem;
+    font-size: var(--heading-font-size);
     font-weight: 300;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--card-front-bg);
 }
 
 .card-details {
-    padding: 1rem 2rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 0 2rem;
 }
 
 .card-details ul {
+    position: relative;
+    top: 4rem;
     list-style: none;
-    /* width: 80%; */
     margin: 0 auto;
+    padding: 0;
 }
 
 .card-details ul li {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: var(--detail-font-size);
     padding: 0.5rem;
 }
 
 .card-details ul li:not(:last-child) {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color); /* Feine Linie in px */
 }
 
-/* Card Animation für Hover (nur auf non-touch Geräten) */
+/* Interactive States */
 @media (hover: hover) {
-.card {
-    cursor: pointer;
+    .card {
+        cursor: pointer;
+    }
+
+    .card:hover .card-side_back,
+    .card:focus-within .card-side_back {
+        transform: rotateY(0);
+    }
+
+    .card:hover .card-side_front,
+    .card:focus-within .card-side_front {
+        transform: rotateY(-180deg);
+    }
 }
 
-.card-side_back {
-    transform: rotateY(180deg);
-}
-
-.card:hover .card-side_back {
-    transform: rotateY(0);
-}
-
-.card:hover .card-side_front {
-    transform: rotateY(-180deg);
-}
-}
-  
-/* Card Animation für Touch Geräte */
+/* Touch Device Interaction */
 @media (hover: none) {
-.card {
-    cursor: pointer;
-}
-
-.card-side_back {
-    transform: rotateY(180deg);
-}
-
-.card.is-flipped .card-side_back {
-    transform: rotateY(0);
-}
-
-.card.is-flipped .card-side_front {
-    transform: rotateY(-180deg);
-}
-}
-
-@media (max-width: 1200px) {  
-    .card-details ul li {
-        font-size: 1rem;
+    .card {
+        cursor: pointer;
     }
-      
-      .card-heading-span {
-        font-size: 1.3rem;
-    }
-}   
 
-@media (max-width: 1024px) {  
-    .card-details ul li {
-        font-size: 1rem;
+    .card.is-flipped .card-side_back {
+        transform: rotateY(0);
     }
-      
-    .card-heading-span {
-        font-size: 1.3rem;
-    }  
-} 
 
-@media (max-width: 380px) {
-    .card-details ul li {
-        font-size: 0.8rem;
+    .card.is-flipped .card-side_front {
+        transform: rotateY(-180deg);
     }
-      
-    .card-heading-span {
-        font-size: 1rem;
-    }  
-}  
+}
+
+/* Responsive Design */
+@media (max-width: 75rem) { /* 1200px */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 64rem) { /* 1024px */
+    .cards-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 47.9375rem) { /* 767px */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cards-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 26.75rem) { /* 428px */
+    .cards-container {
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+}
