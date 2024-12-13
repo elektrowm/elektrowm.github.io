@@ -1,23 +1,31 @@
-let lastScrollPosition = window.scrollY;
-const navbar = document.querySelector('.navbar');
-const threshold = 100; // Mindestscrollabstand bevor die Navbar sich versteckt
+let lastScrollTop = 0;
+const body = document.body;
 
-window.addEventListener('scroll', () => {
-	const currentScrollPosition = window.scrollY;
+// Haupt-Scroll-Event-Handler
+body.addEventListener('scroll', function() {
+	// Aktuelle Scroll-Position
+	let scrollTop = body.scrollTop;
 	
-	// Prüfen ob genug gescrollt wurde
-	if (Math.abs(lastScrollPosition - currentScrollPosition) <= threshold) {
-		return;
+	// Scroll-Richtung ermitteln
+	if (scrollTop > lastScrollTop) {
+		// Nach unten scrollen - Navigation ausblenden
+		document.documentElement.style.setProperty('overflow', 'hidden');
+		document.body.style.setProperty('height', '100%');
+		
+		// Vollbild-Modus aktivieren
+		if (document.documentElement.requestFullscreen) {
+			document.documentElement.requestFullscreen();
+		}
+	} else {
+		// Nach oben scrollen - Navigation wieder einblenden
+		document.documentElement.style.removeProperty('overflow');
+		document.body.style.removeProperty('height');
+		
+		// Vollbild-Modus beenden
+		if (document.fullscreenElement) {
+			document.exitFullscreen();
+		}
 	}
-
-	// Nach unten scrollen versteckt die Navbar
-	if (currentScrollPosition > lastScrollPosition) {
-		navbar.classList.add('hidden');
-	} 
-	// Nach oben scrollen zeigt die Navbar
-	else {
-		navbar.classList.remove('hidden');
-	}
-
-	lastScrollPosition = currentScrollPosition;
-});
+	
+	lastScrollTop = scrollTop;
+}, { passive: true });
