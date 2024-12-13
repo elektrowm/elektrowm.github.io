@@ -45,7 +45,7 @@ html {
     -webkit-text-size-adjust: 100%;
     position: fixed;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -56,7 +56,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     /* Wichtig: Verhindert Gummibandeffekt auf iOS */
     -webkit-overflow-scrolling: touch;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
