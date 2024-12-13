@@ -203,4 +203,5 @@ document.addEventListener('DOMContentLoaded', function() {
 //Hide Toolbar on Scroll iOS
 //========================================
 
-$('body').delay('1000').animate({ scrollTop: '0px' }, 'slow');
+$('html,body').animate({ scrollTop: scrollto + 'px' }, 'slow')
+window.scroll(0,0);

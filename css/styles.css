@@ -236,7 +236,7 @@ body {
     .topnav ul {
       flex-direction: column;
       row-gap: 2.5rem;
-    }
+    }    
 }  
 
 .topnav ul{
@@ -256,6 +256,19 @@ body {
 }
 
 .topnav-link:hover {
+    color: #fff;
+}
+
+.topnav-link-call {
+    display: none;
+}
+
+.topnav-link-call span:first-child {
+    color: var(--corporate-color);
+    font-weight: 700;
+}
+
+.topnav-link-call span:nth-child(2):hover {
     color: #fff;
 }
 
@@ -313,6 +326,11 @@ body {
     .burger {
       display: flex;
     }
+
+    .topnav-link-call {
+        display: block;
+    }
+
 } 
   
 /* ==========================================================================
