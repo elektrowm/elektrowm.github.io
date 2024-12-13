@@ -203,26 +203,4 @@ document.addEventListener('DOMContentLoaded', function() {
 //Hide Toolbar on Scroll iOS
 //========================================
 
-// Variable für die letzte Scroll-Position
-let lastScrollTop = 0;
-
-// Event Listener für das Scroll-Event
-window.addEventListener('scroll', function() {
-    // Aktuelle Scroll-Position mit moderner scrollY-Eigenschaft
-    let scrollTop = window.scrollY;
-    
-    // Navigation auswählen
-    let navbar = document.querySelector('.navbar'); // Passen Sie den Selektor an Ihre Navbar-Klasse an
-    
-    // Prüfen der Scroll-Richtung
-    if (scrollTop > lastScrollTop) {
-        // Nach unten scrollen - Navbar ausblenden
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Nach oben scrollen - Navbar einblenden
-        navbar.style.transform = 'translateY(0)';
-    }
-    
-    // Aktuelle Position für nächsten Vergleich speichern
-    lastScrollTop = scrollTop;
-});
+$('body').delay('1000').animate({ scrollTop: '0px' }, 'slow');

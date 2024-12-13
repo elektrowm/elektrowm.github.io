@@ -408,6 +408,12 @@ body {
     font-size: 1.5rem;
 }
 
+.project-box span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
 .project-box p {
     padding-left: 3rem;
     hyphens: auto; 
