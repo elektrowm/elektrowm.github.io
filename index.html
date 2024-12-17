@@ -2,45 +2,33 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <!--Viewport Meta-Tag im HTML für Mobile Geräte -->
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        
-        <!-- Moderne Browser-Kompatiblität -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
-        <!-- Sicherheits-Header --
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;">        
-        <!-- SEO Meta-Tags -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;"> -->
+
         <meta name="description" content="Ihr Elektriker in der Region Stuttgart für Elektroinstallation, Elektrotechnik, hochwertige Beleuchtungstechnik und Smart Home Lösungen">
         <meta name="keywords" content="elektriker stuttgart, elektroinstallation stuttgart, elektriker weilimdorf, elektroservice, lampeninstallation, leuchtenmontage, elektromontage, herdanschluss, backofenanschluss, steckdose reparieren, beleuchtung planung, smarthome installation, wallbox installation, elektro fehlerdiagnose, schnelle termine, elektro notdienst">
         <meta name="author" content="Warkentin Michael">
         
-        <!-- Social Media Meta-Tags -->
         <meta property="og:title" content="ElektroWM">
         <meta property="og:description" content="Elektriker in der Region Stuttgart">
         <meta property="og:type" content="website">
-        <meta property="og:url content="https://www.elektrowm.com/">
+        <meta property="og:url" content="https://www.elektrowm.com/">
         
-        <!-- Mobile-spezifische Meta-Tags -->
         <meta name="mobile-web-app-capable" content="yes">
-
-        <meta name="apple-mobile-web-app-capable" content="yes" />     
-        <meta name="apple-touch-fullscreen" content="yes" /> <!--card-details are better-->
-        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
         
+        <!-- Stylesheets -->
+
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        
-        <!--CSS Animation-->
         <link rel="stylesheet" href="css/animate.css">
-        <!--CSS Slider-->
         <link rel="stylesheet" href="css/slider.css">
-        <!--CSS Flip Cards-->
         <link rel="stylesheet" href="css/flipcards.css">
-        <!--CSS Main-->
         <link rel="stylesheet" href="css/styles.css">
-        <!--CSS Swiper-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
         <title>ElektroWM</title>
     </head>
@@ -263,11 +251,11 @@
                                     </div>
                                     <div class="card-details">
                                         <ul>
-                                            <li>Lastmanagement prüfen</li>
+                                            <li>Lastmanagement</li>
                                             <li>Kabelverlegung</li>
                                             <li>Leistung einstellen</li>
                                             <li>App konfigurieren</li>
-                                            <li>FI-/Überspannungsschutz</li>
+                                            <li>Überspannungsschutz</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -411,8 +399,8 @@
                     </div>
                     <div class="testimonials-grid">
                         <div class="testimonial-item">
-                            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                            <div class="elfsight-app-1f1f8edf-beaa-48a7-9f70-8336e99a67e1" data-elfsight-app-lazy>
+                            <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                            <div class="elfsight-app-1f1f8edf-beaa-48a7-9f70-8336e99a67e1" data-elfsight-app-lazy> -->
                         </div>
                     </div>
                 </div>
@@ -424,6 +412,7 @@
                 <div class="container">            
                     <div class="section-headline">
                         <h1 class="headline-title-dark wow animated fadeInDown">Kontakt aufnehmen</h1>
+                        <p class="headline-subtitle">Elektriker Warkentin Michael</p>
                     </div>
                     <figure class="logo-center">
                         <div class="logo-center-circle">
@@ -431,11 +420,59 @@
                         </div>
                     </figure>
             
+                    <div class="contact-form-wrapper">
+                        <div class="contact-form">
 
-                    <div class="contact-content">
-                        <a class="telefon" href="tel:+4917699970740">
-                            <i class="telefon-icon fa-solid fa-phone"></i> 0176 999 70740
-                        </a>
+                            <form method="POST" id="form">
+                                <!-- <input type="hidden" name="access_key" value="f1493a87-edde-49dd-bd80-f8cb9048c732"> -->
+                                    <a class="phone phone-btn" href="tel:+4917699970740">
+                                        <i class="phone-icon fa-solid fa-phone"></i> 0176 999 70740
+                                    </a>          
+                                <h2>Nehmen Sie Kontakt mit mir auf!</h2>
+                                <p>Über das Kontaktformular können Sie mir eine Nachricht hinterlassen und ich melde mich bei Ihnen zurück.</p>
+    
+                             
+                                <div class="input-box">
+                                    <div class="input-field field">
+                                        <input id="name" name="name" class="item" type="text" placeholder="Vorname" required autocomplete="on">
+                                        <div class="error-txt">Vorname eintragen</div>
+                                    </div>
+                                    <div class="input-field field">
+                                        <input id="surname" name="surname" class="item" type="text" placeholder="Nachname" required autocomplete="on">
+                                        <div class="error-txt">Nachname eintragen</div>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="input-field field">
+                                        <input id="phone" name="phone" class="item" type="text" placeholder="Telefonnummer" required autocomplete="on">
+                                        <div class="error-txt phone">Telefonnummer eintragen</div>
+                                    </div>
+                                    <div class="input-field field">
+                                        <input id="email" name="email" class="item" type="text" placeholder="Email Adresse" required autocomplete="on">
+                                        <div class="error-txt email">Email eintragen</div>
+                                    </div>
+                                </div>
+                                <div class="input-field field">
+                                    <input id="subject" name="subject" class="item" type="text" placeholder="Anliegen" required autocomplete="off">
+                                    <div class="error-txt">Anliegen eintragen</div>
+                                </div>
+                                <div class="textarea-field field">
+                                    <textarea id="message" name="message" class="item" type="text" placeholder="Nachricht" required autocomplete="off" cols="30" rows="10"></textarea>
+                                    <div class="error-txt">Nachricht eintragen</div>
+                                </div>
+                                
+                                <div class="consent-field field">
+                                    <label class="consent-container">
+                                        <input type="checkbox" name="privacy-consent" required>
+                                        <span id="consent" class="checkmark"></span>
+                                    </label>
+
+                                    <p>Mit dem Absenden des Formulars bestätige ich, dass ich die Datenschutzerklärung zur Kenntnis genommen habe. Die von mir angegebenen Daten werden elektronisch erhoben, gespeichert und nur streng zweckgebunden für die Bearbeitung meiner Anfrage genutzt.</p>
+                                </div>  
+                                <button id="submit" class="submit-btn" type="submit">Abschicken</button>
+                                <div id="result"></div> 
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -462,42 +499,50 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <div class="container">
+            <div class="footer-container">
                 <address class="footer-block">
+                    <div class="footer-item footer-headline">
+                        <span class="footer-headline-txt">Ihr Elektriker für Planung,</span>
+                        <span class="footer-headline-txt" > Montage und Installation</span>
+                    </div>
+
                     <div class="footer-grid wow animated fadeInRight">
-                        <div class="footer-item">
-                            <p>Elektro WM <br>Warkentin Michael.</p>
+                        <div class="footer-item line">
+                            <p>Elektro WM<br>Warkentin Michael</p>
                         </div>
-                        <div class="footer-item">
-                            <a class="link-footer" href="mailto:elektrowm@web.de">
-                                <i class="fa-solid fa-envelope"></i> elektrowm@web.de
+
+                        <div class="footer-item line">
+                            <p>Mainzer Str.12 <br>70499 Stuttgart</p>
+                        </div>
+                        <div class="footer-item line">
+                            <a class="link-footer" href="mailto:info@elektrowm.com">
+                                <i class="fa-solid fa-envelope"></i> info@elektrowm.com
                             </a>
                             <a class="link-footer" href="tel:004917699970740">
                                 <i class="fa-solid fa-phone"></i> 0176 999 70740
                             </a>
                         </div>
-                        <div class="footer-item">
-                            <p>Mainzer Str.12 <br>70499 Stuttgart</p>
+
+                        <div class="footer-item line">
+                            <a href="contact.html" class="link-footer contact-link">Kontakt</a>
+                            <a href="impressum.html" class="link-footer impressum-link">Impressum</a>
+                            <a href="datenschutz.html" class="link-footer data-link">Datenschutz</a>
                         </div>
+            
                     </div>
+                    <div class="copyright">
+                        <p>&copy <script>document.write(new Date().getFullYear())</script> Elektro WM</p>
+                    </div>
+        
                 </address>
-            </div>
-            <div class="copyright">
-                <p>&copy <script>document.write(new Date().getFullYear())</script> Elektro WM</p>
             </div>
         </footer>
 
-        <!--Swiper Script-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!--Cards Element-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        <!--Onscroll animation-->
         <script src="js/wow.min.js"></script>
-        <!-- Navbar Google Chrome Script -->
-        <script src="js/navbar.js"></script>
-        <!-- Main Script -->
+        <script src="js/form.js"></script>
         <script src="js/script.js"></script>
-        <!--Fontawesome Icon font-->
-        <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>       
+        <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>
