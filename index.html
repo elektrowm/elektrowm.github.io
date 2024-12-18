@@ -24,10 +24,10 @@
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/flipcards.css">
-        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
         <title>ElektroWM</title>
@@ -424,14 +424,12 @@
                         <div class="contact-form">
 
                             <form method="POST" id="form">
-                                <!-- <input type="hidden" name="access_key" value="f1493a87-edde-49dd-bd80-f8cb9048c732"> -->
-                                    <a class="phone phone-btn" href="tel:+4917699970740">
-                                        <i class="phone-icon fa-solid fa-phone"></i> 0176 999 70740
-                                    </a>          
+                                <a class="phone phone-btn" href="tel:+4917699970740"><i class="phone-icon fa-solid fa-phone"></i> 0176 999 70740</a>
                                 <h2>Nehmen Sie Kontakt mit mir auf!</h2>
                                 <p>Über das Kontaktformular können Sie mir eine Nachricht hinterlassen und ich melde mich bei Ihnen zurück.</p>
-    
-                             
+
+                                <input type="hidden" name="access_key" value="f1493a87-edde-49dd-bd80-f8cb9048c732">
+  
                                 <div class="input-box">
                                     <div class="input-field field">
                                         <input id="name" name="name" class="item" type="text" placeholder="Vorname" required autocomplete="on">
@@ -460,17 +458,23 @@
                                     <textarea id="message" name="message" class="item" type="text" placeholder="Nachricht" required autocomplete="off" cols="30" rows="10"></textarea>
                                     <div class="error-txt">Nachricht eintragen</div>
                                 </div>
-                                
+
+                                <div class="consent-field field">
+                                    <input id="consent" type="checkbox" name="privacy-consent" required>
+                                    <p>Mit dem Absenden des Formulars bestätige ich, dass ich die Datenschutzerklärung zur Kenntnis genommen habe. Die von mir angegebenen Daten werden elektronisch erhoben, gespeichert und nur streng zweckgebunden für die Bearbeitung meiner Anfrage genutzt.</p>
+                                    <div class="error-txt">Datenschutzerklärung annehmen</div>
+                                </div>
+<!--                                 
                                 <div class="consent-field field">
                                     <label class="consent-container">
-                                        <input type="checkbox" name="privacy-consent" required>
-                                        <span id="consent" class="checkmark"></span>
+                                        
+                                        <div class="error-txt">
+                                            <span id="consent-visual" type="checkbox" class="checkmark"></span>
+                                        </div>
                                     </label>
-
-                                    <p>Mit dem Absenden des Formulars bestätige ich, dass ich die Datenschutzerklärung zur Kenntnis genommen habe. Die von mir angegebenen Daten werden elektronisch erhoben, gespeichert und nur streng zweckgebunden für die Bearbeitung meiner Anfrage genutzt.</p>
-                                </div>  
-                                <button id="submit" class="submit-btn" type="submit">Abschicken</button>
-                                <div id="result"></div> 
+                                </div> -->
+                                <div id="result">Result</div> 
+                                <button id="submit" class="submit-btn">Abschicken</button>
                             </form>
                         </div>
                     </div>
@@ -540,9 +544,9 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/form.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/form.js"></script>
+        <script src="js/wow.min.js"></script>
         <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>

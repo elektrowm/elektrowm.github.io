@@ -1,7 +1,6 @@
 //========================================
 //Submit Form
 //========================================
-const form = document.getElementById("form");
 const nameCust = document.getElementById("name");
 const surnameCust = document.getElementById("surname");
 const emailCust = document.getElementById("email");
@@ -10,38 +9,9 @@ const subjectCust = document.getElementById("subject");
 const messageCust = document.getElementById("message");
 
 const consentCust = document.getElementById("consent");
-const result = document.getElementById("result");
 const submitBtn = document.getElementById("submit");
-
-window.onload = () => {
-    form.reset();
-};
-
-function checkInputs() {
-    const items = document.querySelectorAll(".item");
-    
-    for (const item of items) {
-        if (item.value === "") {
-            item.classList.add("error");
-            item.parentElement.classList.add("error");
-        }
-        else {
-            item.classList.remove("error");
-            item.parentElement.classList.remove("error");
-        }
-
-        item.addEventListener("keyup", () => {
-            if (item.value === "") {
-                item.classList.add("error");
-                item.parentElement.classList.add("error");
-            }
-            else {
-                item.classList.remove("error");
-                item.parentElement.classList.remove("error");
-            }
-        });
-    }
-}
+const form = document.getElementById('form');
+const result = document.getElementById('result');
 
 function sendEmail() {
     const formData = {
@@ -53,37 +23,37 @@ function sendEmail() {
         Anliegen: subjectCust.value,
         Nachricht: messageCust.value,
     };
-    
-    result.style.display = "block";
-    result.innerHTML = "Bitte warten...";
 
-    fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(async (response) => {
-        const json = await response.json();
-        if (response.status === 200) {
-            result.innerHTML = "Ihre Nachricht wurde erfolgreich gesendet!";
+    result.innerHTML = "Bitte warten...";
+    result.style.display = "block";
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Ihre Nachricht wurde erfolgreich gesendet!";
+            } else {
+                console.log(response);
+                result.innerHTML = `Ein Fehler ist aufgetreten: ${json.message || 'Bitte versuchen Sie es erneut.'}`;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Etwas ist schief gelaufen! Bitte versuchen Sie es später erneut.";
+        })
+        .then(function() {
             form.reset();
-        } else {
-            console.log(json);
-            result.innerHTML = `Ein Fehler ist aufgetreten: ${json.message || 'Bitte versuchen Sie es erneut.'}`;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-        result.innerHTML = "Etwas ist schief gelaufen! Bitte versuchen Sie es später erneut.";
-    })
-    .finally(() => {
-        setTimeout(() => {
-            result.style.display = "none";
-        }, 3000);
-    });
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
 }
 
 function enableErrorMessage(element) {
@@ -96,21 +66,46 @@ function disableErrorMessage(element) {
     element.parentElement.classList.remove("error");
 }
 
-submitBtn.addEventListener("click", (_) => {
-    var form_items = [
-        [nameCust, /^[a-zA-ZäöüßÄÖÜ\s-]{2,}$/],
-        [surnameCust, /^[a-zA-ZäöüßÄÖÜ\s-]{2,}$/],
-        [emailCust, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/],
-        [phoneCust, /^[\d\s+()-]{5,}$/],
-        [subjectCust, /^[\wäöüßÄÖÜ\s-]{2,}$/],
-        [messageCust, /^[\wäöüßÄÖÜ\s.,!?-]{2,}$/],
-        [consentCust, / /] 
-    ];
+const formItemsWithRegex = [
+    [nameCust, /^[a-zA-ZäöüßÄÖÜ\s-]{2,}$/],
+    [surnameCust, /^[a-zA-ZäöüßÄÖÜ\s-]{2,}$/],
+    [emailCust, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/],
+    [phoneCust, /^[\d\s+()-]{5,}$/],
+    [subjectCust, /^[\wäöüßÄÖÜ\s-]{2,}$/],
+    [messageCust, /^[\wäöüßÄÖÜ\s.,!?-]{2,}$/],
+    [consentCust, / /] 
+];
 
-    form_items = form_items.map((form_item) => {
+formItemsWithRegex.forEach(([element, regex]) => {
+    if (!element) return;
+    
+    element.addEventListener("input", () => {
+        let valid_content = false;
+        
+        if (element.getAttribute("type") === "text") {
+            valid_content = regex.test(element.value);
+        } else if (element.getAttribute("type") === "checkbox") {
+            valid_content = element.checked;
+        }
+        
+        if (valid_content) {
+            disableErrorMessage(element);
+        } else {
+            enableErrorMessage(element);
+        }
+    });
+});
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    const form_items = formItemsWithRegex.map((form_item) => {
         const element = form_item[0];
         
+        // if (!element) return [null, false];
+        
         var valid_content = false;
+        console.log(element.value);
         
         if (element.getAttribute("type") == "text") {
             const regex = form_item[1];
@@ -125,6 +120,7 @@ submitBtn.addEventListener("click", (_) => {
     });
 
     const all_items_valid = form_items.every((x) => x[1]);
+    
     if (all_items_valid) {
         sendEmail();
     } else {
@@ -138,6 +134,5 @@ submitBtn.addEventListener("click", (_) => {
                 enableErrorMessage(element);
             }
         });
-        checkInputs();
     }
 });
