@@ -1,19 +1,6 @@
 /* ==========================================================================
    5. SLIDER SECTION
    ========================================================================== */
-#slider {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    background-color: var(--top-bottom-bg);
-}
-
-.slider-container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: var(--top-bottom-bg);
-}
 
 /* Slider Items */
 .slider-item {
@@ -62,34 +49,34 @@
     to { opacity: 1; }
 }
 
-.slider-title {
+.slider-content h1 {
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.slider-subtitle {
+.slider-content p {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
-    .slider-title {
+    .slider-content h1 {
       font-size: 2rem;
     }
     
-    .slider-subtitle {
+    .slider-content p {
       font-size: 1.2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .slider-title {
+    .slider-content h1 {
       font-size: 1.4rem;
     }
     
-    .slider-subtitle {
+    .slider-content p {
       font-size: 1rem;
     }
 }
@@ -139,7 +126,7 @@
     z-index: 2;
 }
 
-.slider-pagination {
+.slider-controls ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -195,7 +182,7 @@
   }
 
   @media (max-width: 1024px) {
-    .slider-pagination {
+    .slider-controls ul {
       display: none;
     }
   

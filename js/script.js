@@ -1,4 +1,31 @@
 //========================================
+//Navigation Mobile
+//========================================
+
+const btnBurger = document.querySelector(".burger");   
+const topNavMenu = document.querySelector(".topnav");
+const menuItems = document.querySelectorAll(".topnav-link");
+
+
+function closeMobileMenu() {
+    btnBurger.classList.remove("active");
+    topNavMenu.classList.remove("open");
+}
+
+
+btnBurger.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topNavMenu.classList.toggle("open");
+});
+
+
+menuItems.forEach(item => {
+    item.addEventListener("click", function() {
+        closeMobileMenu();
+    });
+});
+
+//========================================
 //Slider, Dots
 //========================================
 
@@ -139,33 +166,6 @@ sliderControls.addEventListener("scroll", () => {
             isScrolling = false;
         });
     }
-});
-
-//========================================
-//Navigation Mobile
-//========================================
-
-const btnBurger = document.querySelector(".burger");   
-const topNavMenu = document.querySelector(".topnav");
-const menuItems = document.querySelectorAll(".topnav-link");
-
-
-function closeMobileMenu() {
-    btnBurger.classList.remove("active");
-    topNavMenu.classList.remove("open");
-}
-
-
-btnBurger.addEventListener("click", function() {
-    this.classList.toggle("active");
-    topNavMenu.classList.toggle("open");
-});
-
-
-menuItems.forEach(item => {
-    item.addEventListener("click", function() {
-        closeMobileMenu();
-    });
 });
 
 //========================================
