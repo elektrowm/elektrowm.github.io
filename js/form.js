@@ -71,8 +71,8 @@ const formItemsWithRegex = [
     [surnameCust, /^[a-zA-ZäöüßÄÖÜ\s-]{2,}$/],
     [emailCust, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/],
     [phoneCust, /^[\d\s+()-]{5,}$/],
-    [subjectCust, /^.{2,}$/s],
-    [messageCust, /^.{2,}$/s],
+    [subjectCust, /^[\s\S]{2,}$/],
+    [messageCust, /^[\s\S]{2,}$/],    
     [consentCust, / /] 
 ];
 
