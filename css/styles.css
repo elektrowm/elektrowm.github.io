@@ -458,7 +458,6 @@ html {
     padding: 1rem;
     background: var(--corporate-color-dark);
     color: var(--text-color-light);
-    /* box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1); */
 }
 
 .project-box i {
@@ -529,12 +528,35 @@ html {
     font-weight: 400;
 }
 
-.testimonial-google {
+.testimonial-numbers .google {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 2rem 0;
+    justify-content: center;
+}
+
+.testimonial-numbers a {
+    text-decoration: none;
+}
+
+.testimonial-numbers .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-numbers img {
+    width: 100px;
+    padding: 5px;
+}
+
+.testimonial-numbers i {
+    font-size: 0.8rem;
+    color: #fbbc05;
+}
+
+.testimonial-numbers i:last-child {
+    color: var(--text-color-light);
+    margin: 10px;
 }
 
 /* ==========================================================================
@@ -627,6 +649,7 @@ html {
 .social-button li a:hover {
     color: var(--corporate-color);
     border-color: var(--corporate-color);
+    transition: all 0.3s ease;
 }
 
 .social-button li:nth-child(2) {

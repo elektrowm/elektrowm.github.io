@@ -384,14 +384,27 @@
                     <div class="headline">
                         <h1 class="headline-title-light">Bewertungen</h1>
                         <div class="testimonial-numbers">
-                            <span>15+</span>
+                            <span>34+</span>
+                            <p>Positive Bewertungen bei </p>
+                            <div class="google">
+                            <a href="https://www.google.com/search?sca_esv=580536168&rlz=1C1CHBD_deDE894DE894&uds=ADvngMjcH0KdF7qGWtwTBrP0nt7dfTO2j0DHibpJvRr5Se0QXHwqgN7YSCuRGmXnA7cwWq1WlzSgfZeMbnchzjU7j-tCXXYrBTbpNWC2cwCAwrYJvFB_mVyml1ZEn10D3A-guC6tjK6NMTCLvkGuq1TuCCgY2-ewZA&q=Elektromontage+Warkentin+Rezensionen&si=ACC90nwjPmqJHrCEt6ewASzksVFQDX8zco_7MgBaIawvaF4-7jda-PSIykv94aEQgiJy5hIXw18SYOoW_fwpN2kE7YNM7S0v9tubCdYx3ec7p9c4q2ge4At2GlEBhGEDTnF3wr9fQAI9RAZtH6AyoftEwNkNNl_N5A%3D%3D&hl=de-DE&sa=X&ved=2ahUKEwiox9ilgsqKAxXJiv0HHRFjBZ8Q_4MLegQIQBAN&biw=1920&bih=920" target="_blank">
+                                <div class="stars">
+                                    <img src="img/googlelogo_color_272x92dp.png" alt="Google">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-up-right-from-square"></i>
+                                </div>
+                            </a>
+                        </div>
+                     
+                            <span id="years"></span>
                             <p>Jahre im Dienstleistungssektor</p>
                             <span>3.620+</span>
                             <p>Zufriedene Kunden</p>
                         </div>    
-                    </div>
-                    <div class="testimonial-google">
-                        <!--API Google Testimonials -->
                     </div>
                 </div>
             </section>
@@ -520,6 +533,12 @@
             </div>
         </footer>
 
+        <script>
+            const startYear = 2009;
+            const currentYear = new Date().getFullYear();
+            const years = currentYear - startYear;
+            document.getElementById("years").textContent = years + "+";
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="js/script.js"></script>
