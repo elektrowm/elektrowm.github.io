@@ -455,10 +455,40 @@ html {
 .project-box {
     display: flex;
     text-align: left;
+    flex-direction: column;
     padding: 1rem;
     background: var(--corporate-color-dark);
     color: var(--text-color-light);
 }
+
+.project-box-text {
+    max-height: 3lh;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: max-height 0.3s ease;
+}
+
+.project-box input:checked ~ .project-box-text {
+    -webkit-line-clamp: unset;
+    max-height: 10lh;
+}
+
+.project-box input:not(:checked) ~ label::after {
+    content: "mehr";
+    color: var(--corporate-color);
+    font-weight: 700;
+    margin-left: 2.9em;
+}
+
+.project-box input:checked ~ label::after {
+    content: "weniger";
+    color: var(--corporate-color);
+    font-weight: 700;
+    margin-left: 2.9em;
+}
+
 
 .project-box i {
     position: absolute;
