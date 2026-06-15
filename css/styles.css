@@ -956,9 +956,13 @@ html {
 
 #result {
     margin-top: 1rem;
-    padding: 1rem;
     border-radius: 6px;
     text-align: center;
+}
+.consent-field input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--corporate-color);
 }
 
 /* ==========================================================================
