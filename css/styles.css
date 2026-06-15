@@ -943,10 +943,11 @@ html {
     hyphens: auto;
 }
 
-.consent-field p {
+.privacy-text {
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
+
 
 .consent-field a {
     color: var(--corporate-color);
@@ -960,33 +961,19 @@ html {
     text-align: center;
 }
 
-/* Checkbox größer für Desktop & Mobile */
 .consent-field input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;  /* Wichtig für mobile Browser */
-    min-height: 24px; /* Wichtig für mobile Browser */
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
     accent-color: var(--corporate-color);
     cursor: pointer;
-    margin-right: 10px;
-    vertical-align: middle;
 }
 
-/* Noch größer für Touch-Geräte (mobile optimiert) */
 @media (max-width: 768px) {
     .consent-field input[type="checkbox"] {
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-        min-height: 28px;
-    }
-}
-
-/* Für ältere iOS-Versionen ohne accent-color Support */
-@supports not (accent-color: var(--corporate-color)) {
-    .consent-field input[type="checkbox"] {
-        transform: scale(1.2);
-        margin: 0 8px 0 0;
+        width: 30px;
+        height: 30px;
     }
 }
 
