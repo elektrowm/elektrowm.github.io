@@ -828,7 +828,7 @@ html {
 
 .contact-form p {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .contact-form form {
@@ -965,10 +965,23 @@ html {
     flex-shrink: 0;
     width: 26px;
     height: 26px;
-    margin-top: 2px;
     accent-color: var(--corporate-color);
     cursor: pointer;
 }
+
+.consent-box {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    margin-bottom: 15px;
+    hyphens: auto;
+    -webkit-hyphens: auto;  /* für Safari */
+    -ms-hyphens: auto;      /* für ältere IE */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 
 @media (max-width: 768px) {
     .consent-field input[type="checkbox"] {
