@@ -32,14 +32,20 @@
 
         <title>ElektroWM</title>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-53WKQFCBBL"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+
+        // Standard: KEINE Daten senden, bis der Nutzer zustimmt
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
         gtag('js', new Date());
 
-        // IP-Anonymisierung aktivieren (Pflicht in Deutschland!)
+        // IP-Anonymisierung ist immer aktiv
         gtag('config', 'G-53WKQFCBBL', {
             'anonymize_ip': true
         });

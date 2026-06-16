@@ -32,18 +32,25 @@
 
         <title>ElektroWM</title>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-53WKQFCBBL"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+
+        // Standard: KEINE Daten senden, bis der Nutzer zustimmt
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
         gtag('js', new Date());
 
-        // IP-Anonymisierung aktivieren (Pflicht in Deutschland!)
+        // IP-Anonymisierung ist immer aktiv
         gtag('config', 'G-53WKQFCBBL', {
             'anonymize_ip': true
         });
         </script>
+
     </head>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <body>
@@ -632,6 +639,48 @@
             </div>
         </footer>
 
+        <!-- ============================================
+        COOKIE-BANNER - DSGVO-konform
+        ============================================ -->
+        <div id="cookieBanner" class="cookie-banner">
+            <div class="cookie-banner-content">
+
+                <!-- Text -->
+                <div class="cookie-banner-text">
+                    <strong>🍪 Wir verwenden Cookies</strong><br>
+                    Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
+                    Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
+                    Weitere Informationen finden Sie in unserer
+                    <a href="data-protection.html" target="_blank">Datenschutzerklärung</a>.
+                </div>
+
+                <!-- Buttons -->
+                <div class="cookie-banner-buttons">
+                    <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Ablehnen</button>
+                    <button class="cookie-btn cookie-btn-settings" onclick="toggleSettings()">Einstellungen</button>
+                    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+                </div>
+
+                <!-- Einstellungen-Panel -->
+                <div id="cookieSettings" class="cookie-settings-panel">
+                    <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
+
+                    <label>
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        Technisch notwendige Cookies (erforderlich)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="cookieAnalytics">
+                        Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu verbessern
+                    </label>
+
+                    <button class="cookie-save-btn" onclick="saveSettings()">Einstellungen speichern</button>
+                </div>
+
+            </div>
+        </div>
+
 
         <!-- Function for Testimonial Section -->
         <script>
@@ -663,6 +712,7 @@
         <script src="js/script.js"></script>
         <script src="js/form.js"></script>
         <script src="js/wow.min.js"></script>
+        <script src="js/cookie.js"></script>
         <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>
