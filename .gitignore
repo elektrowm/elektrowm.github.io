@@ -1,0 +1,44 @@
+# .gitignore-file
+# Regeln von git: https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+# Beispiel: Alle .txt ignorieren
+# *.txt
+# außer diese Datei
+# file.txt 
+
+# Nach jede Modifizierung muss man in cmd status abfragen: 
+# git status
+# und danach die Änderungen akzeptieren:
+# git add . 
+
+# Konfigurationsdateien mit sensiblen Informationen
+config.py
+*.env
+.env
+
+# Logs
+logs/
+*.log
+
+# Audio und Mediendateien
+*.wav
+*.mp3
+*.mp4
+
+# Survey Data
+# *.csv
+
+# Python
+__pycache__/
+
+
+# Audio und Mediendateien
+*.wav
+*.mp3
+*.mp4
+
+# Spezifische Projektdateien
+/fullstack/unreal_engine/
+/fullstack/models/
+/people-data/
+/fullstack/backend/analyse/
+/fullstack/frontend/application_ru/
