@@ -1080,6 +1080,7 @@ html {
     min-width: 250px;
     font-size: 0.9rem;
     line-height: 1.6;
+    hyphens: auto;
 }
 
 .cookie-banner-text strong {
@@ -1237,7 +1238,7 @@ html {
 
     .cookie-btn {
         padding: 8px 16px;
-        font-size: 0.75rem;
+        font-size: 0.6rem;
         flex: 1;
         text-align: center;
         min-width: 80px;
@@ -1259,7 +1260,7 @@ html {
 
     .cookie-btn {
         padding: 6px 12px;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         min-width: 70px;
     }
 }
