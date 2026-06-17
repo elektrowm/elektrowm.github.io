@@ -526,7 +526,175 @@ html {
    PORTFOLIO SECTION - Separate CSS in flipcards.css
    ========================================================================== */
 
+/* Portfolio Section */
+.cards-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 1.5rem; */
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    margin: 20px;
+}
+.card,
+.card-side {
+    width: 300px;
+    height: 320px;
+}
+
+.card-side {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    background-color: var(--headline-light);
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: transform 0.8s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+} 
+
+
+.card-box-front {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--headline-light);
+}
+
+.card-box-front div {
+    position: relative;
+    padding-top: 75%;
+    background-color: var(--headline-light);
+    margin: 20px;
+}
+
+.card-box-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-box-front h1 {
+    font-size: 1rem;
+    color: var(--text-color-dark);
+}
+
+/* Card Back */
+.card-side.back {
+    transform: rotateY(180deg);
+}
+
+.card-cover-back {
+    position: relative;
+    background-size: cover;
+    height: 70px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+    background-color: var(--corporate-color);
+}
+
+.card-cover-back h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--headline-light);
+}
+
+.card-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 0 2rem;
+}
+
+.card-details ul {
+    position: relative;
+    top: 4rem;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.card-details ul li {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.card-details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+/* Interactive States */
+@media (hover: hover) {
+    .card {
+        cursor: pointer;
+    }
+
+    .card:hover .card-side.back,
+    .card:focus-within .card-side.back {
+        transform: rotateY(0);
+    }
+
+    .card:hover .card-side.front,
+    .card:focus-within .card-side.front {
+        transform: rotateY(-180deg);
+    }
+}
+
+/* Touch Device Interaction */
+@media (hover: none) {
+    .card {
+        cursor: pointer;
+    }
+
+    .card.is-flipped .card-side.back {
+        transform: rotateY(0);
+    }
+
+    .card.is-flipped .card-side.front {
+        transform: rotateY(-180deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ==========================================================================
    TESTIMONIAL SECTION

@@ -172,31 +172,68 @@ sliderControls.addEventListener("scroll", () => {
 //Card Flip Animation
 //========================================
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Alle Karten auswählen
-    const cards = document.querySelectorAll(".card");
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Alle Karten auswählen
+//     const cards = document.querySelectorAll(".card");
     
-    // Überprüfen, ob es ein Touch-Gerät ist
+//     // Überprüfen, ob es ein Touch-Gerät ist
+//     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    
+//     if (isTouchDevice) {
+//         // Für jede Karte Event Listener hinzufügen
+//         cards.forEach(card => {
+//             // Click/Touch Event Handler für diese Karte
+//             function handleClick(e) {
+//                 card.classList.toggle("is-flipped");
+//             }
+            
+//             // Event Listener für Touch und Click
+//             card.addEventListener("click", handleClick);
+//             card.addEventListener("touchend", function(e) {
+//                 if (e.cancelable) {
+//                     e.preventDefault();
+//                 }
+//                 handleClick(e);
+//             });
+//         });
+//     }
+// });
+
+
+//========================================
+//Card Flip Animation
+//========================================
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".card");
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     
+    // Click ist IMMER aktiv (funktioniert auf allen Geräten)
+    cards.forEach(card => {
+        card.addEventListener("click", function(e) {
+            this.classList.toggle("is-flipped");
+        });
+    });
+    
+    // Zusätzliche Touch-Optimierung für besseres Gefühl auf Touch-Geräten
     if (isTouchDevice) {
-        // Für jede Karte Event Listener hinzufügen
         cards.forEach(card => {
-            // Click/Touch Event Handler für diese Karte
-            function handleClick(e) {
-                card.classList.toggle("is-flipped");
-            }
+            // Verhindert, dass Click doppelt ausgeführt wird
+            let touchHandled = false;
             
-            // Event Listener für Touch und Click
-            card.addEventListener("click", handleClick);
+            card.addEventListener("touchstart", function() {
+                touchHandled = false;
+            }, { passive: true });
+            
             card.addEventListener("touchend", function(e) {
-                if (e.cancelable) {
-                    e.preventDefault();
+                if (!touchHandled) {
+                    touchHandled = true;
+                    // Leichte Verzögerung, damit Click nicht auch noch feuert
+                    setTimeout(() => {
+                        this.classList.toggle("is-flipped");
+                    }, 10);
                 }
-                handleClick(e);
             });
         });
     }
 });
-
-
