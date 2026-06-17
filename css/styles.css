@@ -90,7 +90,6 @@ html {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: var(--top-bottom-bg);
 }
 
 .footer-container {
@@ -235,7 +234,6 @@ html {
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     -webkit-mask-size: 200%;
     animation: shine 2s infinite;
-    /* Füge Standard-Mask-Properties für bessere Browser-Kompatibilität hinzu */
     mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     mask-size: 200%;
 }
@@ -316,7 +314,7 @@ html {
     justify-content: flex-end;
     width: 30px;
     height: 20px;
-    /* margin-right: 20px; */
+    cursor: pointer;
 }
 
 .burger span{
@@ -530,7 +528,6 @@ html {
    PORTFOLIO SECTION - Separate CSS in flipcards.css
    ========================================================================== */
 
-/* Portfolio Section */
 .cards-container {
     width: 100%;
     max-width: 1200px;
@@ -545,7 +542,6 @@ html {
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 1.5rem; */
     text-align: center;
 }
 
@@ -561,8 +557,8 @@ html {
 
 .card-side {
     position: absolute;
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    left: 0;
     background-color: var(--card-front-bg);
     text-align: center;
     -webkit-backface-visibility: hidden;
@@ -905,7 +901,6 @@ html {
     position: relative;
     text-align: left;
     font-size: 0.8rem;
-    /* padding-right: 1rem; */
 }
 
 .footer-col:nth-child(-n+3) {
@@ -914,7 +909,6 @@ html {
 
 .footer-col a {
     display: flex;
-    /* justify-content: left; */
     align-items: center;
     gap: 10px;
     text-decoration: none;
@@ -988,9 +982,10 @@ html {
     }
 }
 
-/************************
- FORM
- ************************/
+/* ==========================================================================
+   FORM & CONTACT
+   ========================================================================== */
+
 .contact-form {
     width: 100%;
     display: flex;
