@@ -7,12 +7,12 @@
         
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;"> -->
 
-        <meta name="description" content="Ihr Elektriker in der Region Stuttgart für Elektroinstallation, Elektrotechnik, hochwertige Beleuchtungstechnik und Smart Home Lösungen">
-        <meta name="keywords" content="elektriker stuttgart, elektroinstallation stuttgart, elektriker weilimdorf, elektroservice, lampeninstallation, leuchtenmontage, elektromontage, herdanschluss, backofenanschluss, steckdose reparieren, beleuchtung planung, smarthome installation, wallbox installation, elektro fehlerdiagnose, schnelle termine, elektro notdienst">
-        <meta name="author" content="Warkentin Michael">
+        <meta name="description" content="Ihr Elektriker & Sicherheitsexperte in der Region Stuttgart für Elektroinstallation, Elektrotechnik, Alarmanlagen und Smart Home Lösungen">
+        <meta name="keywords" content="alarmanlage, sicherheitstechnik, einbruchschutz, brandschutz, notfallsystem, diebstahl, sicherheit, alarmtechnik, elektriker stuttgart, elektroinstallation stuttgart, elektriker weilimdorf, elektroservice, lampeninstallation, leuchtenmontage, elektromontage, herdanschluss, backofenanschluss, steckdose reparieren, beleuchtung planung, smarthome installation, wallbox installation, elektro fehlerdiagnose, schnelle termine, elektro notdienst, elektrobetrieb stuttgart, sicherheitstechnik stuttgart, einbruchmeldeanlage, videoüberwachung, smart home stuttgart, energiewende, photovoltaik installation, notdienste elektro, elektro reparaturdienst, elektro wartung, beleuchtungstechnik, led installation, sicherheitsbeleuchtung, brandmeldeanlage, rauchwarnmelder, elektro prüfung, elektro abnahme, sicherungskasten, verteilerkasten, drehstrom, nachtspeicherheizung, rolladensteuerung, jalousiesteuerung, türsprechanlage, gegensprechanlage, netzwerkinstallation, datenverkabelung, feuerbach, zuffenhausen, kornwestheim, leonberg, gerlingen, ditzingen">
+        <meta name="author" content="ElektroWM Team">
         
         <meta property="og:title" content="ElektroWM">
-        <meta property="og:description" content="Elektriker in der Region Stuttgart">
+        <meta property="og:description" content="Elektriker und Sicherheitsexperte in der Region Stuttgart">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://www.elektrowm.com/">
         
@@ -27,10 +27,28 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slider.css">
-        <link rel="stylesheet" href="css/flipcards.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
         <title>ElektroWM</title>
+
+        <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-377THBZLL4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Standard: KEINE Daten senden, bis der Nutzer zustimmt
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
+        gtag('js', new Date());
+
+        // IP-Anonymisierung ist immer aktiv
+        gtag('config', 'G-377THBZLL4', {
+            'anonymize_ip': true
+        });
+        </script>
     </head>
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <body>
@@ -53,7 +71,7 @@
                         <li><a href="index.html#portfolio" class="topnav-link">Leistungen</a></li>
                         <li><a href="index.html#testimonial" class="topnav-link">Bewertungen</a></li>
                         <li><a href="index.html#contact" class="topnav-link">Kontakt</a></li>
-                        <li><a class="topnav-link topnav-link-call" href="tel:+4917699970740"><div>Jetzt anrufen</div><br><div>+49 176 999 70740</div></a></li>     
+                        <li><a class="topnav-link topnav-link-call" href="tel:+4917673247141"><div>Jetzt anrufen</div><br><div>+49 176 7324 7141</div></a></li>     
                     </ul>  
                 </nav>
                 <div class="burger">
@@ -71,14 +89,6 @@
                 <div class="slider-container swiper">
                     <div class="slider-wrapper swiper-wrapper">
                         <!-- Slide 1 -->
-                        <div class="slider-item swiper-slide" style="background-image: url('img/slider1.png');">
-                            <div class="slider-content">
-                                <h1>Alarmanlage</h1>
-                                <p>Einbruchschutz, Brandschutz, Notfälle</p>
-                                <!--Button Mehr <a href="#portfolio" class="slider-button"><span>Mehr</span></a> -->
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
                         <div class="slider-item swiper-slide" style="background-image: url('img/slider2.jpg');">
                             <div class="slider-content">
                                 <h1>Beleuchtung</h1>
@@ -86,7 +96,7 @@
                                 <!--Button Mehr <a href="#portfolio" class="slider-button"><span>Mehr</span></a> -->
                             </div>
                         </div>
-                        <!-- Slide 3 -->
+                        <!-- Slide 2 -->
                         <div class="slider-item swiper-slide" style="background-image: url('img/slider3.jpg');">
                             <div class="slider-content">
                                 <h1>Smart Home</h1>
@@ -94,11 +104,19 @@
                                 <!--Button Mehr <a href="#portfolio" class="slider-button"><span>Mehr</span></a> -->
                             </div>
                         </div>
-                        <!-- Slide 4 -->
+                        <!-- Slide 3 -->
                         <div class="slider-item swiper-slide" style="background-image: url('img/slider4.jpg');">
                             <div class="slider-content">
                                 <h1>E-Mobility</h1>
                                 <p>Komfort und Flexibilität durch die fachgerechte Installation.</p>
+                                <!--Button Mehr <a href="#portfolio" class="slider-button"><span>Mehr</span></a> -->
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slider-item swiper-slide" style="background-image: url('img/slider1.png');">
+                            <div class="slider-content">
+                                <h1>Alarmanlage</h1>
+                                <p>Einbruchschutz, Brandschutz, Notfälle</p>
                                 <!--Button Mehr <a href="#portfolio" class="slider-button"><span>Mehr</span></a> -->
                             </div>
                         </div>
@@ -108,10 +126,10 @@
                     <div class="slider-controls">
                         <ul>
                             <li class="slider-indicator"></li>
-                            <li class="slider-tab">Alarmanlage</li>
                             <li class="slider-tab">Beleuchtung</li>
                             <li class="slider-tab">Smart Home</li>
-                            <li class="slider-tab">E-Mobility</li>                    
+                            <li class="slider-tab">E-Mobility</li>   
+                            <li class="slider-tab">Alarmanlage</li>                 
                         </ul>
                     </div>
 
@@ -142,7 +160,7 @@
                 <div class="container">
                     <div class="headline">
                         <h1 class="headline-title-dark wow animated bounceInLeft">Services</h1>
-                        <p class="headline-subtitle wow animated bounceInRight">Hauptmerkmale meiner Tätigkeit.</p>
+                        <p class="headline-subtitle wow animated bounceInRight">Was unser Unternehmen auszeichnet:</p>
                     </div>
                     <div class="service-grid wow animated zoomIn">
                 
@@ -188,38 +206,71 @@
                         <h1 class="headline-title-light wow animated fadeInDown">Projekte</h1>
                         <p>Komplette Elektro- & Sicherheitslösungen - von der Beratung bis zur professionellen Installation.</p>
                     </div>
+
                     <div class="project-grid">
                         <div class="project-box">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <p><span>Einbruchschutz-Systeme: </span>Ihr Zuhause oder Geschäft – hart erarbeitet und mit viel Herzblut aufgebaut. Modernste vernetzte Sicherheitstechnik mit sofortiger Einbrucherkennung, intelligenten Detektoren und unsichtbaren Barrieren. Allein 2025 wurden 87 Prozent der deutschen Unternehmen angegriffen – die Schäden liegen oft im sechsstelligen Bereich. Auch Privathaushalte bleiben nicht verschont. Die Bedrohung ist real und nimmt stetig zu.</p>
+                            <input type="checkbox" id="read-more-1" style="display: none;">
+                            <div class="project-box-text">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <p><span>Einbruchschutz-Systeme: </span>Installation vernetzter Sicherheitstechnik mit intelligenten Detektoren und unsichtbaren Barrieren für Ihr Zuhause oder Geschäft. Umfassende Beratung zu modernen Lösungen zur Einbrucherkennung und Absicherung gefährdeter Bereiche. Maßgeschneiderte Planung und fachgerechte Montage für ein rundum sicheres Gefühl.</p>
+                            </div>
+                            <label for="read-more-1" style="cursor: pointer;"></label>
                         </div>
                         <div class="project-box">
-                            <i class="fa-solid fa-fire-extinguisher"></i>
-                            <p><span>Brandschutz- & Notfall-Lösungen: </span>Intelligente Rauch- und Hitzemelder erkennen Gefahren frühzeitig – vernetzt und zuverlässig, auch bei Abwesenheit. Für Ihre liebsten Angehörigen: Diskrete Notrufsender alarmieren im medizinischen Notfall auf Knopfdruck schnelle Hilfe. Denn im Ernstfall entscheiden Sekunden über Leben und Tod. So schützen Sie Ihre Familie rundum – im Alltag und im Ernstfall.</p>
+                            <input type="checkbox" id="read-more-2" style="display: none;">
+                            <div class="project-box-text">
+                            <i class="fa-solid fa-fire"></i>
+                            <p><span>Brandschutz- & Notfall-Lösungen: </span>Installation intelligenter Rauch- und Hitzemelder mit vernetzter Frühwarnung – auch bei Abwesenheit. Diskrete Notrufsender für Angehörige zur schnellen Alarmierung im medizinischen Notfall. Beratung zu ganzheitlichen Schutzkonzepten und zuverlässige Montage aller Sicherheitskomponenten.</p>
+                            </div>
+                            <label for="read-more-2" style="cursor: pointer;"></label>
                         </div>
                         <div class="project-box">
+                            <input type="checkbox" id="read-more-3" style="display: none;">
+                            <div class="project-box-text">
                             <i class="fa-solid fa-power-off"></i>
                             <p><span>Schienensysteme & Beleuchtung: </span>Installation moderner Schienensysteme mit LED-Spots, Pendel- und Hängeleuchten im gesamten Einfamilienhaus. Umfassende Beratung zur optimalen Positionierung der Beleuchtungselemente. Maßgeschneiderte Planung und saubere Installation des durchdachten Beleuchtungskonzepts vom Eingangsbereich bis zum Dachgeschoss.</p>
+                            </div>
+                            <label for="read-more-3" style="cursor: pointer;"></label>
                         </div>
                         <div class="project-box">
+                            <input type="checkbox" id="read-more-4" style="display: none;">
+                            <div class="project-box-text">
                             <i class="fa-solid fa-sun"></i>
                             <p><span>Photovoltaikanlage: </span>Installation einer leistungsstarken Photovoltaikanlage als nachhaltiges Balkonkraftwerk. Optimierung der Ausrichtung für maximalen Ertrag. Fachgerechte Befestigung und Errichtung sowie Betreuung aller technischen Details. Eine effiziente Lösung für die private Energiewende.</p>
+                            </div>
+                            <label for="read-more-4" style="cursor: pointer;"></label>
                         </div>
-                        <!-- <div class="project-box">
+                        <div class="project-box">
+                            <input type="checkbox" id="read-more-5" style="display: none;">
+                            <div class="project-box-text">
                             <i class="fa-solid fa-tree-city"></i>
                             <p><span>Rollläden & Jalousien: </span>Fachgerechte Stromverlegung und Installation elektrischer Antriebe für Rollläden und Jalousien. Integration moderner Steuerungssysteme mit programmierbaren Zeitschaltuhren und optionaler Smartphone-Anbindung. Ausführliche Einweisung in die Bedienung inklusive.</p>
+                            </div>
+                            <label for="read-more-5" style="cursor: pointer;"></label>
                         </div>
                         <div class="project-box">
+                            <input type="checkbox" id="read-more-6" style="display: none;">
+                            <div class="project-box-text">
                             <i class="fa-solid fa-water"></i>
                             <p><span>Pool-Beleuchtung: </span>Installation einer professionellen LED-Beleuchtung für den Außenpool mit durchdachter Elektroplanung. Realisierung der kompletten Stromzufuhr und Integration vielfältiger Schaltmöglichkeiten. Einrichtung einer innovativen Smart-Steuerung mit RGB-W-Technologie. Wassergeschützte Ausführung nach höchsten Sicherheitsstandards.</p>
-                        </div> -->
-                        <div class="project-box">
-                            <i class="fa-solid fa-car-side"></i>
-                            <p><span>Wallbox-Installation: </span>Installation einer zukunftssicheren Wallbox an der Außenfassade des Einfamilienhauses für komfortables Laden von Elektrofahrzeugen. Prüfung der vorhandenen Elektroinstallation, bedarfsgerechte Dimensionierung des Anschlusses und normgerechte, sichere Montage inklusive aller erforderlichen Schutzeinrichtungen.</p>
+                            </div>
+                            <label for="read-more-6" style="cursor: pointer;"></label>
                         </div>
                         <div class="project-box">
+                            <input type="checkbox" id="read-more-7" style="display: none;">
+                            <div class="project-box-text">
+                            <i class="fa-solid fa-car-side"></i>
+                            <p><span>Wallbox-Installation: </span>Installation einer zukunftssicheren Wallbox an der Außenfassade des Einfamilienhauses für komfortables Laden von Elektrofahrzeugen. Prüfung der vorhandenen Elektroinstallation, bedarfsgerechte Dimensionierung des Anschlusses und normgerechte, sichere Montage inklusive aller erforderlichen Schutzeinrichtungen.</p>
+                            </div>
+                            <label for="read-more-7" style="cursor: pointer;"></label>
+                        </div>
+                        <div class="project-box">
+                            <input type="checkbox" id="read-more-8" style="display: none;">
+                            <div class="project-box-text">
                             <i class="fa-solid fa-plug"></i>
                             <p><span>Smart Home & Garten: </span>Installation energieeffizienter Smart-Home-Strahler und intelligent schaltbarer Steckdosen im Gartenbereich. Perfekt aufeinander abgestimmte Komponenten für automatisierte Beleuchtungsszenarien und komfortable Steuerung aller Gartengeräte. Wetterfeste Installation und professionelle Einrichtung der Smart-Home-Anbindung.</p>
+                            </div>
+                            <label for="read-more-8" style="cursor: pointer;"></label>
                         </div>
                     </div>
                 </div>
@@ -232,37 +283,35 @@
                 <div class="container" style="padding-bottom: 0;">
                     <div class="headline">
                         <h1 class="headline-title-dark wow animated fadeInDown">Leistungen</h1>
-                        <!-- <p>Ihr zuverlässiger, sorgfältiger und professioneller Elektriker in Stuttgart und Umgebung.</p> -->
-                        <p>Ihr zuverlässiger Elektriker & Sicherheitsexperte für Alarmanlagen in Stuttgart und Umgebung.</p>
+                        <p>Zuverlässige Elektroinstallation & Sicherheitstechnik in Stuttgart und Umgebung.</p>
                     </div>
                 </div>
                 <div class="cards-container">
                     <div class="cards-grid wow animated fadeInUp">
 
                         <!--Flip Cards Animation-->
-
                         <div class="card">
                             <div class="card-side back">
                                 <div class="card-cover-back">
-                                    <h1>Alarmanlagen</h1>
+                                    <h1>Leuchtenmontage</h1>
                                 </div>
                                 <div class="card-details">
                                     <ul>
-                                        <li>Planung</li>
-                                        <li>Einbruchschutz</li>
-                                        <li>Brandschutz</li>
-                                        <li>Notfall-Systeme</li>
-                                        <li>24/7 Überwachung</li>
+                                        <li>Schienensysteme</li>
+                                        <li>Leuchten aller Arten</li>
+                                        <li>Einbaustrahler</li>
+                                        <li>Dimmschalter</li>
+                                        <li>Bewegungsmelder</li>
                                     </ul>
                                 </div>
                             </div>
-
+    
                             <div class="card-side front"> 
                                 <div class="card-box-front">
                                     <div>
-                                        <img src="img/portfolio/item7.jpg" alt="Alarmanlagen">
+                                        <img src="img/portfolio/item3.jpg" alt="Leuchtenmontage">
                                     </div>
-                                    <h1>Alarmanlagen</h1>
+                                    <h1>Leuchtenmontage</h1>
                                 </div>
                             </div>
                         </div>
@@ -286,7 +335,7 @@
                             <div class="card-side front"> 
                                 <div class="card-box-front">
                                     <div class="card-image">
-                                        <img src="img/portfolio/item5.png" alt="Smart Home">
+                                        <img src="img/portfolio/item8.jpg" alt="Smart Home">
                                     </div>
                                     <h1>Smart Home</h1>
                                 </div>
@@ -322,28 +371,29 @@
                         <div class="card">
                             <div class="card-side back">
                                 <div class="card-cover-back">
-                                    <h1>Leuchtenmontage</h1>
+                                    <h1>Alarmanlagen</h1>
                                 </div>
                                 <div class="card-details">
                                     <ul>
-                                        <li>Schienensysteme</li>
-                                        <li>Leuchten aller Arten</li>
-                                        <li>Einbaustrahler</li>
-                                        <li>Dimmschalter</li>
-                                        <li>Bewegungsmelder</li>
+                                        <li>Planung</li>
+                                        <li>Einbruchschutz</li>
+                                        <li>Brandschutz</li>
+                                        <li>Notfall-Systeme</li>
+                                        <li>24/7 Überwachung</li>
                                     </ul>
                                 </div>
                             </div>
-    
+
                             <div class="card-side front"> 
                                 <div class="card-box-front">
                                     <div>
-                                        <img src="img/portfolio/item3.jpg" alt="Leuchtenmontage">
+                                        <img src="img/portfolio/item7.jpg" alt="Alarmanlagen">
                                     </div>
-                                    <h1>Leuchtenmontage</h1>
+                                    <h1>Alarmanlagen</h1>
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="card">
                             <div class="card-side back">
@@ -364,7 +414,7 @@
                             <div class="card-side front"> 
                                 <div class="card-box-front">
                                     <div class="card-image">
-                                        <img src="img/portfolio/item.jpg" alt="Störungsbehebung">
+                                        <img src="img/portfolio/item1.jpg" alt="Störungsbehebung">
                                     </div>
                                     <h1>Störungsbehebung</h1>
                                 </div>
@@ -423,9 +473,7 @@
                             </div> -->
                         </div>
                     </div>  
-                    <!--/Flip Cards Animation-->  
                 </div>
-
             </section>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -467,7 +515,7 @@
                 <div class="container">            
                     <div class="headline">
                         <h1 class="headline-title-dark wow animated fadeInDown">Kontakt aufnehmen</h1>
-                        <p>Elektriker & Sicherheitsexperte Warkentin Michael</p>
+                        <p>Elektrik & Sicherheit</p>
                     </div>
                     <figure class="logo-circle">
                         <div>
@@ -477,9 +525,9 @@
             
                     <div class="contact-form">
                         <form method="POST" id="form">
-                            <a class="phone-btn" role="button" href="tel:+4917699970740"><i class="fa-solid fa-phone"></i> 0176 999 70740</a>
-                            <h1>Nehmen Sie Kontakt mit mir auf!</h1>
-                            <p>Über das Kontaktformular können Sie mir eine Nachricht hinterlassen und ich melde mich bei Ihnen zurück.</p>
+                            <a class="phone-btn" role="button" href="tel:+4917673247141"><i class="fa-solid fa-phone"></i> 0176 7324 7141</a>
+                            <h1>Nehmen Sie Kontakt mit uns auf!</h1>
+                            <p>Über das Kontaktformular können Sie uns eine Nachricht hinterlassen und wir melden uns bei Ihnen zurück.</p>
 
                             <input type="hidden" name="access_key" value="f1493a87-edde-49dd-bd80-f8cb9048c732">
 
@@ -513,9 +561,15 @@
                             </div>
 
                             <div class="consent-field field">
-                                <input id="consent" type="checkbox" name="privacy-consent" required>
-                                <p>Mit dem Absenden des Formulars bestätige ich, dass ich die <a target="_blank" href="/data-protection.html">Datenschutz&#8203;erklärung <i class="fa-solid fa-up-right-from-square"></i></a> zur Kenntnis genommen habe. Die von mir angegebenen Daten werden elektronisch erhoben, gespeichert und nur streng zweckgebunden für die Bearbeitung meiner Anfrage genutzt.</p>
-                                <div class="error-txt">Datenschutzerklärung annehmen</div>
+
+                                <div class="privacy-text">
+                                    <p>Mit dem Absenden des Formulars bestätige ich, dass ich die <a target="_blank" href="data-protection.html">Datenschutz&#8203;erklärung <i class="fa-solid fa-up-right-from-square"></i></a> zur Kenntnis genommen habe. Die von mir angegebenen Daten werden elektronisch erhoben, gespeichert und nur streng zweckgebunden für die Bearbeitung meiner Anfrage genutzt.</p>
+                                </div>
+                                <div class="consent-box">
+                                    <input id="consent" type="checkbox" name="privacy-consent" required>
+                                    <p>Ich akzeptiere die Datenschutzerklärung</p>
+                                </div>
+                                <div class="error-txt">Bitte akzeptieren Sie die Datenschutzerklärung</div>
                             </div>
                             <div id="result"></div> 
                             <button id="submit" class="submit-btn">Abschicken</button>
@@ -528,7 +582,7 @@
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
             <!-- Social Section -->
-            <section id="social">
+            <!-- <section id="social">
                 <div class="container">
                     <div class="headline">
                         <h1 class="headline-title-light wow animated fadeInDown">Soziale Medien</h1>
@@ -537,10 +591,9 @@
                     <ul class="social-button">
                         <li class="wow animated zoomIn"><a href="https://www.google.com/search?q=elektromontage+warkentin+rezensionen&sca_esv=580536168&rlz=1C1CHBD_deDE894DE894&sxsrf=AM9HkKlRD63Jb9Whkd7wvMg2qi01U-cRJg%3A1699463684389&ei=BMJLZdexF4yAi-gPoIqFmAo&oq=elektromontage+warkentin&gs_lp=Egxnd3Mtd2l6LXNlcnAiGGVsZWt0cm9tb250YWdlIHdhcmtlbnRpbioCCAAyBBAjGCcyBBAjGCcyAhAmSPhiUKYWWPtFcAJ4AJABAJgBvwGgAa4KqgEDNy41uAEByAEA-AEBwgIIEAAYogQYsAPCAgsQABiJBRiiBBiwA8ICBRAAGKIEwgIKEAAYCBgeGA0YD8ICChAAGAgYBxgeGA_CAggQABgIGB4YD8ICCBAhGKABGMME4gMEGAEgQYgGAZAGBQ&sclient=gws-wiz-serp#lrd=0x4799db8285777387:0x806b59dd57f77f4d,3,,,," target="_blank"><i class="fa-brands fa-google"></i></a></li>
                         <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com/elektrowm/?hl=de" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="https://www.linkedin.com/in/michael-warkentin-7960992b2" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>							
                     </ul>
                 </div>
-            </section>
+            </section> -->
 
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -549,13 +602,12 @@
             <div class="footer-container">
                 <address>
                     <div class="footer-headline">
-                        <span>Ihr Elektriker für Planung,</span>
-                        <span> Montage und Installation</span>
+                        <span>Elektroinstallation & Sicherheitstechnik</span>
                     </div>
 
                     <div class="footer-grid wow animated fadeInRight">
                         <div class="footer-col">
-                            <p>Elektro WM<br>Warkentin Michael</p>
+                            <p>Elektro WM<br>Inh. Warkentin Michael</p>
                         </div>
 
                         <div class="footer-col">
@@ -565,8 +617,8 @@
                             <a href="mailto:info@elektrowm.com">
                                 <i class="fa-solid fa-envelope"></i> info@elektrowm.com
                             </a>
-                            <a href="tel:004917699970740">
-                                <i class="fa-solid fa-phone"></i> 0176 999 70740
+                            <a href="tel:+4917673247141">
+                                <i class="fa-solid fa-phone"></i> 0176 7324 7141
                             </a>
                         </div>
 
@@ -585,17 +637,80 @@
             </div>
         </footer>
 
+        <!-- ============================================
+        COOKIE-BANNER - DSGVO-konform
+        ============================================ -->
+        <div id="cookieBanner" class="cookie-banner">
+            <div class="cookie-banner-content">
+
+                <!-- Text -->
+                <div class="cookie-banner-text">
+                    <strong>🍪 Wir verwenden Cookies</strong><br>
+                    Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
+                    Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
+                    Weitere Informationen finden Sie in unserer
+                    <a href="data-protection.html" target="_blank">Datenschutzerklärung</a>.
+                </div>
+
+                <!-- Buttons -->
+                <div class="cookie-banner-buttons">
+                    <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Ablehnen</button>
+                    <button class="cookie-btn cookie-btn-settings" onclick="toggleSettings()">Einstellungen</button>
+                    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+                </div>
+
+                <!-- Einstellungen-Panel -->
+                <div id="cookieSettings" class="cookie-settings-panel">
+                    <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
+
+                    <label>
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        Technisch notwendige Cookies (erforderlich)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="cookieAnalytics">
+                        Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu verbessern
+                    </label>
+
+                    <button class="cookie-save-btn" onclick="saveSettings()">Einstellungen speichern</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Function for Testimonial Section -->
         <script>
             const startYear = 2009;
             const currentYear = new Date().getFullYear();
             const years = currentYear - startYear;
             document.getElementById("years").textContent = years + "+";
         </script>
+
+        <!-- Function for Project Section - The text will be shorter after 30 seconds -->
+        <script>
+            document.querySelectorAll('.project-box input[type="checkbox"]').forEach(checkbox => {
+                let timeout;
+                
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        if (timeout) clearTimeout(timeout);
+                        timeout = setTimeout(() => {
+                            this.checked = false;
+                        }, 30000);
+                    } else {
+                        if (timeout) clearTimeout(timeout);
+                    }
+                });
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/form.js"></script>
         <script src="js/wow.min.js"></script>
+        <script src="js/cookie.js"></script>
         <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>
