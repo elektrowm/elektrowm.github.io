@@ -67,7 +67,7 @@ const updateIndicator = (index, direction) => {
     
     // Animation basierend auf Swipe-Richtung
     const currentTab = sliderTabs[normalizedIndex];
-    const targetX = currentTab.offsetLeft - 20;
+    const targetX = currentTab.offsetLeft;
     
     // Weiche Animation des Indikators
     sliderIndicator.style.transition = "transform 0.3s ease-out, width 0.3s ease-out";
@@ -198,3 +198,5 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
