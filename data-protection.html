@@ -51,10 +51,11 @@
         </script>
 
     </head>
-
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <body>
         <header id="header">
             <div class="header-container">
+                <!-- Logo -->
                 <div class="header-logo">
                     <a href="index.html#slider">
                         Elektro WM 
@@ -62,6 +63,7 @@
                     </a>
                 </div>
                 
+                <!-- Navigation -->
                 <nav class="topnav" id="primary-navigation">
                     <ul>
                         <li><a href="index.html#slider" class="topnav-link">Home</a></li>
@@ -70,7 +72,7 @@
                         <li><a href="index.html#portfolio" class="topnav-link">Leistungen</a></li>
                         <li><a href="index.html#testimonial" class="topnav-link">Bewertungen</a></li>
                         <li><a href="index.html#contact" class="topnav-link">Kontakt</a></li>
-                        <li><a class="topnav-link topnav-link-call" href="tel:+4917699970740"><div>Jetzt anrufen</div><br><div>+49 176 999 70740</div></a></li>     
+                        <li><a class="topnav-link topnav-link-call" href="tel:+4917673247141"><div>Jetzt anrufen</div><br><div>+49 (0) 176 7324 7141</div></a></li>     
                     </ul>  
                 </nav>
                 <div class="burger">
@@ -78,7 +80,7 @@
                 </div>      
             </div>
         </header>
-
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <main class="data-protection">
             <section id="data-txt">
                 <div class="container data-protection-container">
@@ -94,7 +96,7 @@
                         Mainzer Str. 12<br>
                         70499 Stuttgart<br><br>
                         E-Mail: <a href="mailto:info@elektrowm.com">info@elektrowm.com</a><br>
-                        Telefon: 0176 999 70740</b>
+                        Telefon: +49 (0) 176 7324 7141</b>
                     </p>
                 
                     <h2>2. Grundlegendes</h2>
@@ -133,10 +135,10 @@
                     <h3>4.1 Social Media Plugins</h3>
                     <p>Unsere Website verwendet Links zu den Plattformen:</p>
                     <ul>
-                        <li>Google</li>
-                        <li>Instagram</li>
-                        <li>LinkedIn</li>
+                        <li><a href="https://www.google.com/search?q=elektrowm" target="_blank" rel="noopener noreferrer">Google</a></li>
+                        <li><a href="https://www.instagram.com/elektrowm/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     </ul>
+
                     <p>Wenn Sie auf die entsprechenden Icons klicken, werden Sie auf unsere Social-Media-Profile weitergeleitet. Dabei können Daten an die Betreiber der Plattformen übermittelt werden. Die Verwendung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
                 
                     <h2>5. Ihre Rechte</h2>
@@ -196,8 +198,8 @@
                             <a href="mailto:info@elektrowm.com">
                                 <i class="fa-solid fa-envelope"></i> info@elektrowm.com
                             </a>
-                            <a href="tel:004917699970740">
-                                <i class="fa-solid fa-phone"></i> 0176 999 70740
+                            <a href="tel:+4917673247141">
+                                <i class="fa-solid fa-phone"></i> 0176 7324 7141
                             </a>
                         </div>
 
@@ -216,17 +218,54 @@
             </div>
         </footer>
 
-        <script>
-            const startYear = 2009;
-            const currentYear = new Date().getFullYear();
-            const years = currentYear - startYear;
-            document.getElementById("years").textContent = years + "+";
-        </script>
+        <!-- ============================================
+        COOKIE-BANNER - DSGVO-konform
+        ============================================ -->
+        <div id="cookieBanner" class="cookie-banner">
+            <div class="cookie-banner-content">
+
+                <!-- Text -->
+                <div class="cookie-banner-text">
+                    <strong>Wir verwenden Cookies</strong><br>
+                    Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
+                    Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
+                    Weitere Informationen finden Sie in unserer
+                    <a href="data-protection.html" target="_blank">Datenschutzerklärung</a>.
+                </div>
+
+                <!-- Buttons -->
+                <div class="cookie-banner-buttons">
+                    <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Ablehnen</button>
+                    <button class="cookie-btn cookie-btn-settings" onclick="toggleSettings()">Einstellungen</button>
+                    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+                </div>
+
+                <!-- Einstellungen-Panel -->
+                <div id="cookieSettings" class="cookie-settings-panel">
+                    <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
+
+                    <label>
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        Technisch notwendige Cookies (erforderlich)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="cookieAnalytics">
+                        Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu verbessern
+                    </label>
+
+                    <button class="cookie-save-btn" onclick="saveSettings()">Einstellungen speichern</button>
+                </div>
+
+            </div>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="js/wow.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/form.js"></script>
-        <script src="js/wow.min.js"></script>
+        <script src="js/cookie.js"></script>
         <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -199,4 +199,94 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// ==========================================
+// 4. TESTIMONIAL SECTION - JAHRESZAHL
+// ==========================================
 
+const startYear = 2009;
+const currentYear = new Date().getFullYear();
+const years = currentYear - startYear;
+const yearsElement = document.getElementById("years");
+
+if (yearsElement) {
+    yearsElement.textContent = years + "+";
+}
+
+// ==========================================
+// 5. PROJECT SECTION - AUTO-CLOSE CHECKBOX
+// ==========================================
+
+document.querySelectorAll('.project-box input[type="checkbox"]').forEach(checkbox => {
+    let timeout;
+
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            if (timeout) clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                this.checked = false;
+            }, 30000);
+        } else {
+            if (timeout) clearTimeout(timeout);
+        }
+    });
+});
+
+// ==========================================
+// 8. SMOOTH SCROLL FÜR INTERNE LINKS
+// ==========================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        const href = this.getAttribute("href");
+        
+        // Nur wenn es ein interner Link ist und nicht leer
+        if (href !== "#" && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        }
+    });
+});
+
+
+// ==========================================
+// 9. LAZY LOADING FÜR BILDER
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img[data-src]");
+    
+    if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.getAttribute("data-src");
+                    img.removeAttribute("data-src");
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback für ältere Browser
+        images.forEach(img => {
+            img.src = img.getAttribute("data-src");
+            img.removeAttribute("data-src");
+        });
+    }
+});
+
+
+// ==========================================
+// 10. CONSOLE WARNING
+// ==========================================
+
+console.log("%c🔌 ElektroWM - Professionelle Elektroinstallation", "font-size:20px; font-weight:bold; color:#f0b429;");
+console.log("%cBesuchen Sie uns: https://www.elektrowm.com", "font-size:14px; color:#666;");

@@ -32,7 +32,7 @@
         <title>ElektroWM</title>
 
         <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-53WKQFCBBL"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-377THBZLL4"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -45,7 +45,7 @@
         gtag('js', new Date());
 
         // IP-Anonymisierung ist immer aktiv
-        gtag('config', 'G-53WKQFCBBL', {
+        gtag('config', 'G-377THBZLL4', {
             'anonymize_ip': true
         });
         </script>
@@ -71,7 +71,7 @@
                         <li><a href="index.html#portfolio" class="topnav-link">Leistungen</a></li>
                         <li><a href="index.html#testimonial" class="topnav-link">Bewertungen</a></li>
                         <li><a href="index.html#contact" class="topnav-link">Kontakt</a></li>
-                        <li><a class="topnav-link topnav-link-call" href="tel:+4917699970740"><div>Jetzt anrufen</div><br><div>+49 176 999 70740</div></a></li>     
+                        <li><a class="topnav-link topnav-link-call" href="tel:+4917673247141"><div>Jetzt anrufen</div><br><div>+49 176 7324 7141</div></a></li>     
                     </ul>  
                 </nav>
                 <div class="burger">
@@ -98,7 +98,7 @@
 
                         <h2>Kontakt</h2>
                         <p>
-                            Telefon: +49 (0) 176 999 70740<br>
+                            Telefon: +49 (0) 176 7324 7141<br>
                             E-Mail: <a href="mailto:info@elektrowm.com">info@elektrowm.com</a>
                         </p>
                     </div>
@@ -155,8 +155,8 @@
                             <a href="mailto:info@elektrowm.com">
                                 <i class="fa-solid fa-envelope"></i> info@elektrowm.com
                             </a>
-                            <a href="tel:004917699970740">
-                                <i class="fa-solid fa-phone"></i> 0176 999 70740
+                            <a href="tel:+4917673247141">
+                                <i class="fa-solid fa-phone"></i> 0176 7324 7141
                             </a>
                         </div>
 
@@ -175,17 +175,54 @@
             </div>
         </footer>
 
-        <script>
-            const startYear = 2009;
-            const currentYear = new Date().getFullYear();
-            const years = currentYear - startYear;
-            document.getElementById("years").textContent = years + "+";
-        </script>
+        <!-- ============================================
+        COOKIE-BANNER - DSGVO-konform
+        ============================================ -->
+        <div id="cookieBanner" class="cookie-banner">
+            <div class="cookie-banner-content">
+
+                <!-- Text -->
+                <div class="cookie-banner-text">
+                    <strong>Wir verwenden Cookies</strong><br>
+                    Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
+                    Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
+                    Weitere Informationen finden Sie in unserer
+                    <a href="data-protection.html" target="_blank">Datenschutzerklärung</a>.
+                </div>
+
+                <!-- Buttons -->
+                <div class="cookie-banner-buttons">
+                    <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Ablehnen</button>
+                    <button class="cookie-btn cookie-btn-settings" onclick="toggleSettings()">Einstellungen</button>
+                    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+                </div>
+
+                <!-- Einstellungen-Panel -->
+                <div id="cookieSettings" class="cookie-settings-panel">
+                    <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
+
+                    <label>
+                        <input type="checkbox" id="cookieNecessary" checked disabled>
+                        Technisch notwendige Cookies (erforderlich)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="cookieAnalytics">
+                        Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu verbessern
+                    </label>
+
+                    <button class="cookie-save-btn" onclick="saveSettings()">Einstellungen speichern</button>
+                </div>
+
+            </div>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="js/wow.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/form.js"></script>
-        <script src="js/wow.min.js"></script>
+        <script src="js/cookie.js"></script>
         <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
     </body>
 </html>
