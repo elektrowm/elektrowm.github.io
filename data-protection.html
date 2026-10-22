@@ -1,271 +1,512 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;"> -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta name="description" content="Ihr Elektriker & Sicherheitsexperte in der Region Stuttgart für Elektroinstallation, Elektrotechnik, Alarmanlagen und Smart Home Lösungen">
-        <meta name="keywords" content="alarmanlage, sicherheitstechnik, einbruchschutz, brandschutz, notfallsystem, diebstahl, sicherheit, alarmtechnik, elektriker stuttgart, elektroinstallation stuttgart, elektriker weilimdorf, elektroservice, lampeninstallation, leuchtenmontage, elektromontage, herdanschluss, backofenanschluss, steckdose reparieren, beleuchtung planung, smarthome installation, wallbox installation, elektro fehlerdiagnose, schnelle termine, elektro notdienst, elektrobetrieb stuttgart, sicherheitstechnik stuttgart, einbruchmeldeanlage, videoüberwachung, smart home stuttgart, energiewende, photovoltaik installation, notdienste elektro, elektro reparaturdienst, elektro wartung, beleuchtungstechnik, led installation, sicherheitsbeleuchtung, brandmeldeanlage, rauchwarnmelder, elektro prüfung, elektro abnahme, sicherungskasten, verteilerkasten, drehstrom, nachtspeicherheizung, rolladensteuerung, jalousiesteuerung, türsprechanlage, gegensprechanlage, netzwerkinstallation, datenverkabelung, feuerbach, zuffenhausen, kornwestheim, leonberg, gerlingen, ditzingen">
-        <meta name="author" content="ElektroWM Team">
-        
-        <meta property="og:title" content="ElektroWM">
-        <meta property="og:description" content="Elektriker und Sicherheitsexperte in der Region Stuttgart">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.elektrowm.com/">
-        
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-touch-fullscreen" content="yes">
-        
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="img/favicon.png">
-        
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/slider.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com;"> -->
 
-        <title>ElektroWM</title>
+    <meta
+      name="description"
+      content="Datenschutzerklärung von ElektroWM in Stuttgart: Informationen zur Verarbeitung personenbezogener Daten, Google Analytics, Kontaktformular und Ihre Rechte nach DSGVO."
+    />
+    <meta
+      name="keywords"
+      content="datenschutz, datenschutzerklärung, dsgvo, elektro wm, stuttgart, google analytics, kontaktformular"
+    />
+    <meta name="author" content="ElektroWM" />
 
-        <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-377THBZLL4"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+    <meta property="og:title" content="Datenschutzerklärung – ElektroWM" />
+    <meta
+      property="og:description"
+      content="Datenschutzerklärung von ElektroWM in Stuttgart"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.elektrowm.com/data-protection.html"
+    />
 
-        // Standard: KEINE Daten senden, bis der Nutzer zustimmt
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied'
-        });
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
 
-        gtag('js', new Date());
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 
-        // IP-Anonymisierung ist immer aktiv
-        gtag('config', 'G-377THBZLL4', {
-            'anonymize_ip': true
-        });
-        </script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    </head>
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <body>
-        <header id="header">
-            <div class="header-container">
-                <!-- Logo -->
-                <div class="header-logo">
-                    <a href="index.html#slider">
-                        Elektro WM 
-                        <img src="img/logo-small-grey.png" alt="logo">
-                    </a>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="topnav" id="primary-navigation">
-                    <ul>
-                        <li><a href="index.html#slider" class="topnav-link">Home</a></li>
-                        <li><a href="index.html#service" class="topnav-link">Services</a></li>
-                        <li><a href="index.html#project" class="topnav-link">Projekte</a></li>
-                        <li><a href="index.html#portfolio" class="topnav-link">Leistungen</a></li>
-                        <li><a href="index.html#testimonial" class="topnav-link">Bewertungen</a></li>
-                        <li><a href="index.html#contact" class="topnav-link">Kontakt</a></li>
-                        <li><a class="topnav-link topnav-link-call" href="tel:+4917673247141"><div>Jetzt anrufen</div><br><div>+49 (0) 176 7324 7141</div></a></li>     
-                    </ul>  
-                </nav>
-                <div class="burger">
-                    <span></span>
-                </div>      
-            </div>
-        </header>
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-        <main class="data-protection">
-            <section id="data-txt">
-                <div class="container data-protection-container">
-                    <div class="headline">
-                        <h1 class="headline-title-dark wow animated bounceInLeft">Datenschutzerklärung</h1>
-                    </div>
+    <title>Datenschutzerklärung – ElektroWM</title>
 
-                    <h2>1. Verantwortlicher</h2>
-                    <p>Verantwortlich im Sinne der Datenschutzgrundverordnung (DSGVO) ist:</p>
-                    <p>
-                        <b>Elektro WM - Elektroinstallation Stuttgart<br>
-                        Inh. Michael Warkentin<br>
-                        Mainzer Str. 12<br>
-                        70499 Stuttgart<br><br>
-                        E-Mail: <a href="mailto:info@elektrowm.com">info@elektrowm.com</a><br>
-                        Telefon: +49 (0) 176 7324 7141</b>
-                    </p>
-                
-                    <h2>2. Grundlegendes</h2>
-                    <p>Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und die Zwecke der Erhebung und Verwendung personenbezogener Daten auf unserer Webseite. Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</p>
-                
-                    <h2>3. Datenerfassung auf unserer Website</h2>
-                    
-                    <h3>3.1 Automatische Datenerfassung</h3>
-                    <p>Wenn Sie unsere Webseite besuchen, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches. Hierbei handelt es sich ausschließlich um Informationen, welche keine Rückschlüsse auf Ihre Person zulassen. Diese Daten sind technisch notwendig, um von Ihnen angeforderte Inhalte von Webseiten korrekt auszuliefern.</p>
-                
-                    <h3>3.2 Kontaktformular</h3>
-                    <p>Wenn Sie uns über das Kontaktformular kontaktieren, werden die von Ihnen angegebenen Daten (Name, Nachname, Telefonnummer, E-Mail-Adresse, Betreff und Nachricht) bei uns gespeichert, um Ihre Anfrage zu bearbeiten. Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind.</p>
+    <!-- Google tag (gtag.js) - Wartet auf Cookie-Zustimmung -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-377THBZLL4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-                    <h3>3.3 Google Analytics</h3>
-                    <p>Diese Website verwendet Google Analytics, einen Webanalysedienst der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; "Google"). Google Analytics verwendet Cookies, die eine Analyse der Nutzung unserer Website ermöglicht.</p>
+      // Standard: KEINE Daten senden, bis der Nutzer zustimmt
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+      });
 
-                    <p>Die durch den Cookie erzeugten Informationen über Ihre Nutzung dieser Website (einschließlich Ihrer gekürzten IP-Adresse) werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt wird.</p>
+      gtag("js", new Date());
 
-                    <p>Google wird diese Informationen in unserem Auftrag benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber uns zu erbringen.</p>
-
-                    <p>Rechtsgrundlage für die Nutzung von Google Analytics ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Unser berechtigtes Interesse liegt in der Analyse des Nutzerverhaltens zur Optimierung unseres Webangebots.</p>
-
-                    <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren:</p>
-
-                    <p><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
-
-                    <p>Nähere Informationen zu den Nutzungsbedingungen von Google Analytics sowie zum Datenschutz bei Google finden Sie unter:</p>
-                    <ul>
-                        <li><a href="https://marketingplatform.google.com/about/analytics/terms/de/" target="_blank" rel="noopener noreferrer">Google Analytics Nutzungsbedingungen</a></li>
-                        <li><a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a></li>
-                        <li><a href="https://policies.google.com/technologies/partner-sites?hl=de" target="_blank" rel="noopener noreferrer">Wie Google Daten von Websites nutzt</a></li>
-                    </ul>
-                
-                    <h2>4. Social Media</h2>
-                    
-                    <h3>4.1 Social Media Plugins</h3>
-                    <p>Unsere Website verwendet Links zu den Plattformen:</p>
-                    <ul>
-                        <li><a href="https://www.google.com/search?q=elektrowm" target="_blank" rel="noopener noreferrer">Google</a></li>
-                        <li><a href="https://www.instagram.com/elektrowm/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    </ul>
-
-                    <p>Wenn Sie auf die entsprechenden Icons klicken, werden Sie auf unsere Social-Media-Profile weitergeleitet. Dabei können Daten an die Betreiber der Plattformen übermittelt werden. Die Verwendung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
-                
-                    <h2>5. Ihre Rechte</h2>
-                    <p>Sie haben jederzeit das Recht:</p>
-                    <ul>
-                        <li>Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO)</li>
-                        <li>Die Berichtigung unrichtiger oder unvollständiger Daten zu verlangen (Art. 16 DSGVO)</li>
-                        <li>Die Löschung Ihrer bei uns gespeicherten Daten zu verlangen (Art. 17 DSGVO)</li>
-                        <li>Die Einschränkung der Datenverarbeitung zu verlangen (Art. 18 DSGVO)</li>
-                        <li>Der Datenverarbeitung zu widersprechen (Art. 21 DSGVO)</li>
-                        <li>Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten (Art. 20 DSGVO)</li>
-                    </ul>
-                
-                    <h2>6. SSL-Verschlüsselung</h2>
-                    <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt.</p>
-                
-                    <h2>7. Änderung der Datenschutzerklärung</h2>
-                    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
-                
-                    <h2>8. Fragen zum Datenschutz</h2>
-                    <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an: info@elektrowm.com</p>
-                
-                    <p style="text-align: right; margin-top: 40px;">Stand: 
-                        <script>
-                            const monate = [
-                                'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-                                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
-                            ];
-                            const datum = new Date();
-                            document.write(monate[datum.getMonth()] + " " + datum.getFullYear());                
-                        </script>
-                    </p>        
-                </div>
-            </section>
-        </main>
-
-
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="footer-container">
-                <address>
-                    <div class="footer-headline">
-                        <span>Elektroinstallation & Sicherheitstechnik</span>
-                    </div>
-
-                    <div class="footer-grid wow animated fadeInRight">
-                        <div class="footer-col">
-                            <p>Elektro WM<br>Inh. Warkentin Michael</p>
-                        </div>
-
-                        <div class="footer-col">
-                            <p>Mainzer Str.12 <br>70499 Stuttgart</p>
-                        </div>
-                        <div class="footer-col">
-                            <a href="mailto:info@elektrowm.com">
-                                <i class="fa-solid fa-envelope"></i> info@elektrowm.com
-                            </a>
-                            <a href="tel:+4917673247141">
-                                <i class="fa-solid fa-phone"></i> 0176 7324 7141
-                            </a>
-                        </div>
-
-                        <div class="footer-col">
-                            <a href="index.html#contact">Kontakt</a>
-                            <a href="firm-info.html">Impressum</a>
-                            <a href="data-protection.html">Datenschutz</a>
-                        </div>
-            
-                    </div>
-                    <div class="copyright">
-                        <p>&copy <script>document.write(new Date().getFullYear())</script> Elektro WM</p>
-                    </div>
-        
-                </address>
-            </div>
-        </footer>
-
-        <!-- ============================================
-        COOKIE-BANNER - DSGVO-konform
-        ============================================ -->
-        <div id="cookieBanner" class="cookie-banner">
-            <div class="cookie-banner-content">
-
-                <!-- Text -->
-                <div class="cookie-banner-text">
-                    <strong>Wir verwenden Cookies</strong><br>
-                    Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
-                    Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
-                    Weitere Informationen finden Sie in unserer
-                    <a href="data-protection.html" target="_blank">Datenschutzerklärung</a>.
-                </div>
-
-                <!-- Buttons -->
-                <div class="cookie-banner-buttons">
-                    <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Ablehnen</button>
-                    <button class="cookie-btn cookie-btn-settings" onclick="toggleSettings()">Einstellungen</button>
-                    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-                </div>
-
-                <!-- Einstellungen-Panel -->
-                <div id="cookieSettings" class="cookie-settings-panel">
-                    <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
-
-                    <label>
-                        <input type="checkbox" id="cookieNecessary" checked disabled>
-                        Technisch notwendige Cookies (erforderlich)
-                    </label>
-
-                    <label>
-                        <input type="checkbox" id="cookieAnalytics">
-                        Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu verbessern
-                    </label>
-
-                    <button class="cookie-save-btn" onclick="saveSettings()">Einstellungen speichern</button>
-                </div>
-
-            </div>
+      // IP-Anonymisierung ist immer aktiv
+      gtag("config", "G-377THBZLL4", {
+        anonymize_ip: true,
+      });
+    </script>
+  </head>
+  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <body>
+    <header id="header">
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="index.html#slider">
+            Elektro WM
+            <img src="img/logo-small-grey.png" alt="logo" />
+          </a>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/form.js"></script>
-        <script src="js/cookie.js"></script>
-        <script defer src="https://kit.fontawesome.com/46e8df550f.js" crossorigin="anonymous"></script>
-    </body>
+        <!-- Navigation -->
+        <nav class="topnav" id="primary-navigation">
+          <ul>
+            <li><a href="index.html#slider" class="topnav-link">Home</a></li>
+            <li>
+              <a href="index.html#service" class="topnav-link">Services</a>
+            </li>
+            <li>
+              <a href="index.html#project" class="topnav-link">Projekte</a>
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="topnav-link">Leistungen</a>
+            </li>
+            <li>
+              <a href="index.html#testimonial" class="topnav-link"
+                >Bewertungen</a
+              >
+            </li>
+            <li>
+              <a href="index.html#contact" class="topnav-link">Kontakt</a>
+            </li>
+            <li>
+              <a class="topnav-link topnav-link-call" href="tel:+4917673247141"
+                ><div>Jetzt anrufen</div>
+                <br />
+                <div>+49 (0) 176 7324 7141</div></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <main class="data-protection">
+      <section id="data-txt">
+        <div class="container data-protection-container">
+          <div class="headline">
+            <h1 class="headline-title-dark wow animated bounceInLeft">
+              Datenschutzerklärung
+            </h1>
+          </div>
+
+          <h2>1. Verantwortlicher</h2>
+          <p>
+            Verantwortlich im Sinne der Datenschutzgrundverordnung (DSGVO) ist:
+          </p>
+          <p>
+            <b
+              >Elektro WM – Beleuchtungsberatung, Smart Home &amp;
+              Kabelverlegung<br />
+              Inh. Michael Warkentin<br />
+              Mainzer Str. 12<br />
+              70499 Stuttgart<br /><br />
+              E-Mail: <a href="mailto:info@elektrowm.com">info@elektrowm.com</a
+              ><br />
+              Telefon: +49 (0) 176 7324 7141</b
+            >
+          </p>
+
+          <h2>2. Grundlegendes</h2>
+          <p>
+            Diese Datenschutzerklärung informiert Sie über die Art, den Umfang
+            und die Zwecke der Erhebung und Verwendung personenbezogener Daten
+            auf unserer Webseite. Personenbezogene Daten sind Informationen, die
+            sich auf eine identifizierte oder identifizierbare natürliche Person
+            beziehen.
+          </p>
+
+          <h2>3. Datenerfassung auf unserer Website</h2>
+
+          <h3>3.1 Automatische Datenerfassung</h3>
+          <p>
+            Wenn Sie unsere Webseite besuchen, werden automatisch Informationen
+            allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles)
+            beinhalten etwa die Art des Webbrowsers, das verwendete
+            Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und
+            ähnliches. Hierbei handelt es sich ausschließlich um Informationen,
+            welche keine Rückschlüsse auf Ihre Person zulassen. Diese Daten sind
+            technisch notwendig, um von Ihnen angeforderte Inhalte von Webseiten
+            korrekt auszuliefern.
+          </p>
+
+          <h3>3.2 Kontaktformular</h3>
+          <p>
+            Wenn Sie uns über das Kontaktformular kontaktieren, werden die von
+            Ihnen angegebenen Daten (Name, Nachname, Telefonnummer,
+            E-Mail-Adresse, Betreff und Nachricht) bei uns gespeichert, um Ihre
+            Anfrage zu bearbeiten. Die Datenverarbeitung erfolgt auf Grundlage
+            von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen bzw.
+            Vertragserfüllung). Die Daten werden gelöscht, sobald sie für die
+            Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind.
+          </p>
+          <p>
+            Für den technischen Versand des Kontaktformulars nutzen wir den
+            Dienst <b>Web3Forms</b> (Access Key). Dabei werden die von Ihnen
+            eingegebenen Daten an die Server von Web3Forms übermittelt und von
+            dort an unsere E-Mail-Adresse weitergeleitet. Weitere Informationen
+            finden Sie in der Datenschutzerklärung von Web3Forms.
+          </p>
+
+          <h3>3.3 Google Analytics</h3>
+          <p>
+            Diese Website verwendet Google Analytics, einen Webanalysedienst der
+            Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA;
+            "Google"). Google Analytics verwendet Cookies, die eine Analyse der
+            Nutzung unserer Website ermöglicht.
+          </p>
+
+          <p>
+            Die durch den Cookie erzeugten Informationen über Ihre Nutzung
+            dieser Website (einschließlich Ihrer gekürzten IP-Adresse) werden in
+            der Regel an einen Server von Google in den USA übertragen und dort
+            gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre
+            IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen
+            Union oder in anderen Vertragsstaaten des Abkommens über den
+            Europäischen Wirtschaftsraum zuvor gekürzt wird.
+          </p>
+
+          <p>
+            Google wird diese Informationen in unserem Auftrag benutzen, um Ihre
+            Nutzung der Website auszuwerten, um Reports über die
+            Websiteaktivitäten zusammenzustellen und um weitere mit der
+            Websitenutzung und der Internetnutzung verbundene Dienstleistungen
+            gegenüber uns zu erbringen.
+          </p>
+
+          <p>
+            <b>Rechtsgrundlage</b> für die Nutzung von Google Analytics ist Ihre
+            Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO, die Sie über unser
+            Cookie-Banner erteilen. Die Einwilligung ist jederzeit widerrufbar.
+            Solange Sie nicht eingewilligt haben, wird Google Analytics nicht
+            geladen (Opt-in).
+          </p>
+
+          <p>
+            Sie können die Speicherung der Cookies durch eine entsprechende
+            Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch
+            darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche
+            Funktionen dieser Website vollumfänglich werden nutzen können. Sie
+            können darüber hinaus die Erfassung der durch das Cookie erzeugten
+            und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer
+            IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch
+            Google verhindern, indem Sie das unter dem folgenden Link verfügbare
+            Browser-Plugin herunterladen und installieren:
+          </p>
+
+          <p>
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://tools.google.com/dlpage/gaoptout</a
+            >
+          </p>
+
+          <p>
+            Nähere Informationen zu den Nutzungsbedingungen von Google Analytics
+            sowie zum Datenschutz bei Google finden Sie unter:
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://marketingplatform.google.com/about/analytics/terms/de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google Analytics Nutzungsbedingungen</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://policies.google.com/privacy?hl=de"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google Datenschutzerklärung</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://policies.google.com/technologies/partner-sites?hl=de"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Wie Google Daten von Websites nutzt</a
+              >
+            </li>
+          </ul>
+
+          <h2>4. Social Media</h2>
+
+          <h3>4.1 Social Media Links</h3>
+          <p>Unsere Website verwendet Links zu den Plattformen:</p>
+          <ul>
+            <li>
+              <a
+                href="https://www.google.com/search?q=elektrowm"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Google Bewertungen (Unternehmensprofil)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/elektrowm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+
+          <p>
+            Wenn Sie auf die entsprechenden Links klicken, werden Sie auf unsere
+            Social-Media-Profile weitergeleitet. Dabei können Daten an die
+            Betreiber der Plattformen übermittelt werden. Die Verwendung erfolgt
+            auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+            an der Außendarstellung unseres Unternehmens).
+          </p>
+
+          <h2>5. Ihre Rechte</h2>
+          <p>Sie haben jederzeit das Recht:</p>
+          <ul>
+            <li>
+              Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten
+              zu erhalten (Art. 15 DSGVO)
+            </li>
+            <li>
+              Die Berichtigung unrichtiger oder unvollständiger Daten zu
+              verlangen (Art. 16 DSGVO)
+            </li>
+            <li>
+              Die Löschung Ihrer bei uns gespeicherten Daten zu verlangen (Art.
+              17 DSGVO)
+            </li>
+            <li>
+              Die Einschränkung der Datenverarbeitung zu verlangen (Art. 18
+              DSGVO)
+            </li>
+            <li>Der Datenverarbeitung zu widersprechen (Art. 21 DSGVO)</li>
+            <li>
+              Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren
+              Format zu erhalten (Art. 20 DSGVO)
+            </li>
+            <li>
+              Eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3
+              DSGVO)
+            </li>
+          </ul>
+          <p>
+            Zur Ausübung Ihrer Rechte können Sie sich jederzeit an die oben
+            genannte E-Mail-Adresse wenden.
+          </p>
+
+          <h2>6. SSL-Verschlüsselung</h2>
+          <p>
+            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
+            Übertragung vertraulicher Inhalte, wie zum Beispiel Ihrer Anfragen
+            über das Kontaktformular, eine SSL-Verschlüsselung. Eine
+            verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile
+            des Browsers von "http://" auf "https://" wechselt und an dem
+            Schloss-Symbol in Ihrer Browserzeile.
+          </p>
+
+          <h2>7. Änderung der Datenschutzerklärung</h2>
+          <p>
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit
+            sie stets den aktuellen rechtlichen Anforderungen entspricht oder um
+            Änderungen unserer Leistungen in der Datenschutzerklärung
+            umzusetzen. Für Ihren erneuten Besuch gilt dann die neue
+            Datenschutzerklärung.
+          </p>
+
+          <h2>8. Fragen zum Datenschutz</h2>
+          <p>
+            Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine
+            E-Mail an:
+            <a href="mailto:info@elektrowm.com">info@elektrowm.com</a>
+          </p>
+
+          <p style="text-align: right; margin-top: 40px">
+            Stand:
+            <script>
+              const monate = [
+                "Januar",
+                "Februar",
+                "März",
+                "April",
+                "Mai",
+                "Juni",
+                "Juli",
+                "August",
+                "September",
+                "Oktober",
+                "November",
+                "Dezember",
+              ];
+              const datum = new Date();
+              document.write(
+                monate[datum.getMonth()] + " " + datum.getFullYear()
+              );
+            </script>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-container">
+        <address>
+          <div class="footer-headline">
+            <span>Beleuchtungsberatung, Smart Home &amp; Kabelverlegung</span>
+          </div>
+
+          <div class="footer-grid wow animated fadeInRight">
+            <div class="footer-col">
+              <p>Elektro WM<br />Inh. Warkentin Michael</p>
+            </div>
+
+            <div class="footer-col">
+              <p>Mainzer Str.12 <br />70499 Stuttgart</p>
+            </div>
+            <div class="footer-col">
+              <a href="mailto:info@elektrowm.com">
+                <i class="fa-solid fa-envelope"></i> info@elektrowm.com
+              </a>
+              <a href="tel:+4917673247141">
+                <i class="fa-solid fa-phone"></i> 0176 7324 7141
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <a href="index.html#contact">Kontakt</a>
+              <a href="firm-info.html">Impressum</a>
+              <a href="data-protection.html">Datenschutz</a>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Elektro WM
+            </p>
+          </div>
+        </address>
+      </div>
+    </footer>
+
+    <!-- ============================================
+        COOKIE-BANNER - DSGVO-konform
+        ============================================ -->
+    <div id="cookieBanner" class="cookie-banner">
+      <div class="cookie-banner-content">
+        <!-- Text -->
+        <div class="cookie-banner-text">
+          <strong>Wir verwenden Cookies</strong><br />
+          Wir nutzen Google Analytics, um unsere Website für Sie zu verbessern.
+          Mit Ihrer Zustimmung helfen Sie uns, unser Angebot zu optimieren.
+          Weitere Informationen finden Sie in unserer
+          <a href="data-protection.html" target="_blank">Datenschutzerklärung</a
+          >.
+        </div>
+
+        <!-- Buttons -->
+        <div class="cookie-banner-buttons">
+          <button
+            class="cookie-btn cookie-btn-decline"
+            onclick="declineCookies()"
+          >
+            Ablehnen
+          </button>
+          <button
+            class="cookie-btn cookie-btn-settings"
+            onclick="toggleSettings()"
+          >
+            Einstellungen
+          </button>
+          <button
+            class="cookie-btn cookie-btn-accept"
+            onclick="acceptCookies()"
+          >
+            Alle akzeptieren
+          </button>
+        </div>
+
+        <!-- Einstellungen-Panel -->
+        <div id="cookieSettings" class="cookie-settings-panel">
+          <p>Wählen Sie, welche Cookies Sie zulassen möchten:</p>
+
+          <label>
+            <input type="checkbox" id="cookieNecessary" checked disabled />
+            Technisch notwendige Cookies (erforderlich)
+          </label>
+
+          <label>
+            <input type="checkbox" id="cookieAnalytics" />
+            Analyse-Cookies (Google Analytics) – hilft uns, die Seite zu
+            verbessern
+          </label>
+
+          <button class="cookie-save-btn" onclick="saveSettings()">
+            Einstellungen speichern
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/cookie.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/46e8df550f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
